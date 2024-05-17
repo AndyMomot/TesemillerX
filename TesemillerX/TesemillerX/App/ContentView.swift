@@ -8,19 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var viewModel = ContentViewModel()
+    
     var body: some View {
-        ZStack {
-            Color.blue.opacity(0.3)
-                .ignoresSafeArea()
-            
-            Image(systemName: "house")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 200, height: 200)
-                .foregroundStyle(.red.opacity(0.7))
-                .padding()
-                .background(Color.black.opacity(0.15))
-                .cornerRadius(30)
+        Group {
+            if viewModel.showPreloader {
+                PreloaderView()
+            } else {
+                if viewModel.isAuthorized {
+                    Text("Home")
+                } else {
+                    Text("Auth")
+                }
+            }
+        }
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                self.viewModel.showPreloader.toggle()
+            }
         }
     }
 }

@@ -32,6 +32,9 @@ internal enum Asset {
   internal static let rectangle34 = ImageAsset(name: "Rectangle34")
   internal static let rectangle35 = ImageAsset(name: "Rectangle35")
   internal static let rectangle36 = ImageAsset(name: "Rectangle36")
+  internal static let dots = ImageAsset(name: "dots")
+  internal static let gradientBackground = ImageAsset(name: "gradientBackground")
+  internal static let logoShort = ImageAsset(name: "logoShort")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 

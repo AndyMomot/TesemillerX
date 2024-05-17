@@ -29,6 +29,15 @@
 		47B4180A2BF7544900F449A7 /* KulimPark-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 47B417FF2BF7544900F449A7 /* KulimPark-Regular.ttf */; };
 		47B4180B2BF7544900F449A7 /* KulimPark-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 47B418002BF7544900F449A7 /* KulimPark-SemiBoldItalic.ttf */; };
 		47B4180C2BF7544900F449A7 /* KulimPark-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 47B418012BF7544900F449A7 /* KulimPark-SemiBold.ttf */; };
+		47B418102BF7653A00F449A7 /* PreloaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B4180F2BF7653A00F449A7 /* PreloaderView.swift */; };
+		47B418122BF7656D00F449A7 /* PreloaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B418112BF7656D00F449A7 /* PreloaderViewModel.swift */; };
+		47B418152BF767C000F449A7 /* BackgroundGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B418142BF767C000F449A7 /* BackgroundGradientView.swift */; };
+		47B418172BF76FDA00F449A7 /* Fonts.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B418162BF76FDA00F449A7 /* Fonts.generated.swift */; };
+		47B418192BF76FE500F449A7 /* Images.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B418182BF76FE500F449A7 /* Images.generated.swift */; };
+		47B4181B2BF76FF100F449A7 /* Colors.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B4181A2BF76FF100F449A7 /* Colors.generated.swift */; };
+		47B4181D2BF76FFB00F449A7 /* Strings.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B4181C2BF76FFB00F449A7 /* Strings.generated.swift */; };
+		47B418222BF771BA00F449A7 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B418212BF771BA00F449A7 /* LoaderView.swift */; };
+		47B418242BF77ABC00F449A7 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B418232BF77ABC00F449A7 /* ContentViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +65,15 @@
 		47B417FF2BF7544900F449A7 /* KulimPark-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KulimPark-Regular.ttf"; sourceTree = "<group>"; };
 		47B418002BF7544900F449A7 /* KulimPark-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KulimPark-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		47B418012BF7544900F449A7 /* KulimPark-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KulimPark-SemiBold.ttf"; sourceTree = "<group>"; };
+		47B4180F2BF7653A00F449A7 /* PreloaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreloaderView.swift; sourceTree = "<group>"; };
+		47B418112BF7656D00F449A7 /* PreloaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreloaderViewModel.swift; sourceTree = "<group>"; };
+		47B418142BF767C000F449A7 /* BackgroundGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundGradientView.swift; sourceTree = "<group>"; };
+		47B418162BF76FDA00F449A7 /* Fonts.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.generated.swift; sourceTree = "<group>"; };
+		47B418182BF76FE500F449A7 /* Images.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.generated.swift; sourceTree = "<group>"; };
+		47B4181A2BF76FF100F449A7 /* Colors.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.generated.swift; sourceTree = "<group>"; };
+		47B4181C2BF76FFB00F449A7 /* Strings.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.generated.swift; sourceTree = "<group>"; };
+		47B418212BF771BA00F449A7 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
+		47B418232BF77ABC00F449A7 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,8 +107,10 @@
 		47B417332BF73CAB00F449A7 /* TesemillerX */ = {
 			isa = PBXGroup;
 			children = (
-				47B417512BF742A000F449A7 /* Resources */,
 				47B4174E2BF7424500F449A7 /* App */,
+				47B418132BF7679C00F449A7 /* Views */,
+				47B4180D2BF7650400F449A7 /* Units */,
+				47B417512BF742A000F449A7 /* Resources */,
 				47B4173D2BF73CAC00F449A7 /* Assets.xcassets */,
 				47B4173F2BF73CAC00F449A7 /* LaunchScreen.storyboard */,
 				47B417422BF73CAC00F449A7 /* Info.plist */,
@@ -105,6 +125,7 @@
 				47B417482BF741F400F449A7 /* SceneDelegate.swift */,
 				47B417492BF741F400F449A7 /* ViewController.swift */,
 				47B4174A2BF741F400F449A7 /* ContentView.swift */,
+				47B418232BF77ABC00F449A7 /* ContentViewModel.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -123,6 +144,7 @@
 		47B417522BF742A000F449A7 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				47B418182BF76FE500F449A7 /* Images.generated.swift */,
 				47B417532BF742A000F449A7 /* Images.xcassets */,
 			);
 			path = Images;
@@ -131,6 +153,7 @@
 		47B417552BF742A000F449A7 /* Colors */ = {
 			isa = PBXGroup;
 			children = (
+				47B4181A2BF76FF100F449A7 /* Colors.generated.swift */,
 				47B417562BF742A000F449A7 /* Colors.xcassets */,
 			);
 			path = Colors;
@@ -139,6 +162,7 @@
 		47B417772BF742A000F449A7 /* Localization */ = {
 			isa = PBXGroup;
 			children = (
+				47B4181C2BF76FFB00F449A7 /* Strings.generated.swift */,
 				47B417792BF742A000F449A7 /* Localizable.strings */,
 			);
 			path = Localization;
@@ -147,6 +171,7 @@
 		47B417F42BF750F100F449A7 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				47B418162BF76FDA00F449A7 /* Fonts.generated.swift */,
 				47B417F92BF7544900F449A7 /* KulimPark-Bold.ttf */,
 				47B417F82BF7544900F449A7 /* KulimPark-BoldItalic.ttf */,
 				47B417FC2BF7544900F449A7 /* KulimPark-ExtraLight.ttf */,
@@ -161,6 +186,48 @@
 				47B417F52BF753F600F449A7 /* Lab Sans Pro-Thin.otf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		47B4180D2BF7650400F449A7 /* Units */ = {
+			isa = PBXGroup;
+			children = (
+				47B4180E2BF7651700F449A7 /* Preloader */,
+			);
+			path = Units;
+			sourceTree = "<group>";
+		};
+		47B4180E2BF7651700F449A7 /* Preloader */ = {
+			isa = PBXGroup;
+			children = (
+				47B4180F2BF7653A00F449A7 /* PreloaderView.swift */,
+				47B418112BF7656D00F449A7 /* PreloaderViewModel.swift */,
+			);
+			path = Preloader;
+			sourceTree = "<group>";
+		};
+		47B418132BF7679C00F449A7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				47B418202BF771A500F449A7 /* Loader */,
+				47B4181F2BF771A000F449A7 /* BackgroundGradient */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		47B4181F2BF771A000F449A7 /* BackgroundGradient */ = {
+			isa = PBXGroup;
+			children = (
+				47B418142BF767C000F449A7 /* BackgroundGradientView.swift */,
+			);
+			path = BackgroundGradient;
+			sourceTree = "<group>";
+		};
+		47B418202BF771A500F449A7 /* Loader */ = {
+			isa = PBXGroup;
+			children = (
+				47B418212BF771BA00F449A7 /* LoaderView.swift */,
+			);
+			path = Loader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,9 +340,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				47B4174C2BF741F400F449A7 /* ViewController.swift in Sources */,
+				47B418242BF77ABC00F449A7 /* ContentViewModel.swift in Sources */,
 				47B417352BF73CAB00F449A7 /* AppDelegate.swift in Sources */,
+				47B418152BF767C000F449A7 /* BackgroundGradientView.swift in Sources */,
+				47B4181D2BF76FFB00F449A7 /* Strings.generated.swift in Sources */,
+				47B418192BF76FE500F449A7 /* Images.generated.swift in Sources */,
+				47B418222BF771BA00F449A7 /* LoaderView.swift in Sources */,
 				47B4174D2BF741F400F449A7 /* ContentView.swift in Sources */,
+				47B418122BF7656D00F449A7 /* PreloaderViewModel.swift in Sources */,
 				47B4174B2BF741F400F449A7 /* SceneDelegate.swift in Sources */,
+				47B418102BF7653A00F449A7 /* PreloaderView.swift in Sources */,
+				47B4181B2BF76FF100F449A7 /* Colors.generated.swift in Sources */,
+				47B418172BF76FDA00F449A7 /* Fonts.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
