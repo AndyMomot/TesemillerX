@@ -17,6 +17,18 @@
 		47B4177C2BF742A000F449A7 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47B417562BF742A000F449A7 /* Colors.xcassets */; };
 		47B417982BF742A000F449A7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 47B417792BF742A000F449A7 /* Localizable.strings */; };
 		47B417F32BF745EF00F449A7 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 47B417F22BF745EF00F449A7 /* swiftgen.yml */; };
+		47B417F62BF753F600F449A7 /* Lab Sans Pro-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 47B417F52BF753F600F449A7 /* Lab Sans Pro-Thin.otf */; };
+		47B418022BF7544900F449A7 /* KulimPark-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 47B417F72BF7544900F449A7 /* KulimPark-ExtraLightItalic.ttf */; };
+		47B418032BF7544900F449A7 /* KulimPark-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 47B417F82BF7544900F449A7 /* KulimPark-BoldItalic.ttf */; };
+		47B418042BF7544900F449A7 /* KulimPark-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 47B417F92BF7544900F449A7 /* KulimPark-Bold.ttf */; };
+		47B418052BF7544900F449A7 /* KulimPark-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 47B417FA2BF7544900F449A7 /* KulimPark-Italic.ttf */; };
+		47B418062BF7544900F449A7 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 47B417FB2BF7544900F449A7 /* OFL.txt */; };
+		47B418072BF7544900F449A7 /* KulimPark-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 47B417FC2BF7544900F449A7 /* KulimPark-ExtraLight.ttf */; };
+		47B418082BF7544900F449A7 /* KulimPark-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 47B417FD2BF7544900F449A7 /* KulimPark-LightItalic.ttf */; };
+		47B418092BF7544900F449A7 /* KulimPark-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 47B417FE2BF7544900F449A7 /* KulimPark-Light.ttf */; };
+		47B4180A2BF7544900F449A7 /* KulimPark-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 47B417FF2BF7544900F449A7 /* KulimPark-Regular.ttf */; };
+		47B4180B2BF7544900F449A7 /* KulimPark-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 47B418002BF7544900F449A7 /* KulimPark-SemiBoldItalic.ttf */; };
+		47B4180C2BF7544900F449A7 /* KulimPark-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 47B418012BF7544900F449A7 /* KulimPark-SemiBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +44,18 @@
 		47B417562BF742A000F449A7 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		47B417792BF742A000F449A7 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		47B417F22BF745EF00F449A7 /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
+		47B417F52BF753F600F449A7 /* Lab Sans Pro-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lab Sans Pro-Thin.otf"; sourceTree = "<group>"; };
+		47B417F72BF7544900F449A7 /* KulimPark-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KulimPark-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		47B417F82BF7544900F449A7 /* KulimPark-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KulimPark-BoldItalic.ttf"; sourceTree = "<group>"; };
+		47B417F92BF7544900F449A7 /* KulimPark-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KulimPark-Bold.ttf"; sourceTree = "<group>"; };
+		47B417FA2BF7544900F449A7 /* KulimPark-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KulimPark-Italic.ttf"; sourceTree = "<group>"; };
+		47B417FB2BF7544900F449A7 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		47B417FC2BF7544900F449A7 /* KulimPark-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KulimPark-ExtraLight.ttf"; sourceTree = "<group>"; };
+		47B417FD2BF7544900F449A7 /* KulimPark-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KulimPark-LightItalic.ttf"; sourceTree = "<group>"; };
+		47B417FE2BF7544900F449A7 /* KulimPark-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KulimPark-Light.ttf"; sourceTree = "<group>"; };
+		47B417FF2BF7544900F449A7 /* KulimPark-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KulimPark-Regular.ttf"; sourceTree = "<group>"; };
+		47B418002BF7544900F449A7 /* KulimPark-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KulimPark-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		47B418012BF7544900F449A7 /* KulimPark-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KulimPark-SemiBold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +147,18 @@
 		47B417F42BF750F100F449A7 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				47B417F92BF7544900F449A7 /* KulimPark-Bold.ttf */,
+				47B417F82BF7544900F449A7 /* KulimPark-BoldItalic.ttf */,
+				47B417FC2BF7544900F449A7 /* KulimPark-ExtraLight.ttf */,
+				47B417F72BF7544900F449A7 /* KulimPark-ExtraLightItalic.ttf */,
+				47B417FA2BF7544900F449A7 /* KulimPark-Italic.ttf */,
+				47B417FE2BF7544900F449A7 /* KulimPark-Light.ttf */,
+				47B417FD2BF7544900F449A7 /* KulimPark-LightItalic.ttf */,
+				47B417FF2BF7544900F449A7 /* KulimPark-Regular.ttf */,
+				47B418012BF7544900F449A7 /* KulimPark-SemiBold.ttf */,
+				47B418002BF7544900F449A7 /* KulimPark-SemiBoldItalic.ttf */,
+				47B417FB2BF7544900F449A7 /* OFL.txt */,
+				47B417F52BF753F600F449A7 /* Lab Sans Pro-Thin.otf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -186,10 +222,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47B4180A2BF7544900F449A7 /* KulimPark-Regular.ttf in Resources */,
+				47B418092BF7544900F449A7 /* KulimPark-Light.ttf in Resources */,
+				47B418042BF7544900F449A7 /* KulimPark-Bold.ttf in Resources */,
+				47B417F62BF753F600F449A7 /* Lab Sans Pro-Thin.otf in Resources */,
+				47B418022BF7544900F449A7 /* KulimPark-ExtraLightItalic.ttf in Resources */,
+				47B4180B2BF7544900F449A7 /* KulimPark-SemiBoldItalic.ttf in Resources */,
 				47B417982BF742A000F449A7 /* Localizable.strings in Resources */,
 				47B4177C2BF742A000F449A7 /* Colors.xcassets in Resources */,
+				47B418052BF7544900F449A7 /* KulimPark-Italic.ttf in Resources */,
+				47B418062BF7544900F449A7 /* OFL.txt in Resources */,
+				47B4180C2BF7544900F449A7 /* KulimPark-SemiBold.ttf in Resources */,
 				47B417412BF73CAC00F449A7 /* LaunchScreen.storyboard in Resources */,
 				47B4177A2BF742A000F449A7 /* Images.xcassets in Resources */,
+				47B418032BF7544900F449A7 /* KulimPark-BoldItalic.ttf in Resources */,
+				47B418082BF7544900F449A7 /* KulimPark-LightItalic.ttf in Resources */,
+				47B418072BF7544900F449A7 /* KulimPark-ExtraLight.ttf in Resources */,
 				47B4173E2BF73CAC00F449A7 /* Assets.xcassets in Resources */,
 				47B417F32BF745EF00F449A7 /* swiftgen.yml in Resources */,
 			);
