@@ -38,6 +38,8 @@
 		47B4181D2BF76FFB00F449A7 /* Strings.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B4181C2BF76FFB00F449A7 /* Strings.generated.swift */; };
 		47B418222BF771BA00F449A7 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B418212BF771BA00F449A7 /* LoaderView.swift */; };
 		47B418242BF77ABC00F449A7 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B418232BF77ABC00F449A7 /* ContentViewModel.swift */; };
+		47F7C9642BFB289E00F082BD /* OnboardingViewTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F7C9632BFB289E00F082BD /* OnboardingViewTabView.swift */; };
+		47F7C9662BFB28F300F082BD /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F7C9652BFB28F300F082BD /* OnboardingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +76,8 @@
 		47B4181C2BF76FFB00F449A7 /* Strings.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.generated.swift; sourceTree = "<group>"; };
 		47B418212BF771BA00F449A7 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 		47B418232BF77ABC00F449A7 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		47F7C9632BFB289E00F082BD /* OnboardingViewTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewTabView.swift; sourceTree = "<group>"; };
+		47F7C9652BFB28F300F082BD /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +195,7 @@
 		47B4180D2BF7650400F449A7 /* Units */ = {
 			isa = PBXGroup;
 			children = (
+				47F7C9622BFB273200F082BD /* Onboarding */,
 				47B4180E2BF7651700F449A7 /* Preloader */,
 			);
 			path = Units;
@@ -228,6 +233,15 @@
 				47B418212BF771BA00F449A7 /* LoaderView.swift */,
 			);
 			path = Loader;
+			sourceTree = "<group>";
+		};
+		47F7C9622BFB273200F082BD /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				47F7C9632BFB289E00F082BD /* OnboardingViewTabView.swift */,
+				47F7C9652BFB28F300F082BD /* OnboardingView.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,9 +356,11 @@
 				47B4174C2BF741F400F449A7 /* ViewController.swift in Sources */,
 				47B418242BF77ABC00F449A7 /* ContentViewModel.swift in Sources */,
 				47B417352BF73CAB00F449A7 /* AppDelegate.swift in Sources */,
+				47F7C9662BFB28F300F082BD /* OnboardingView.swift in Sources */,
 				47B418152BF767C000F449A7 /* BackgroundGradientView.swift in Sources */,
 				47B4181D2BF76FFB00F449A7 /* Strings.generated.swift in Sources */,
 				47B418192BF76FE500F449A7 /* Images.generated.swift in Sources */,
+				47F7C9642BFB289E00F082BD /* OnboardingViewTabView.swift in Sources */,
 				47B418222BF771BA00F449A7 /* LoaderView.swift in Sources */,
 				47B4174D2BF741F400F449A7 /* ContentView.swift in Sources */,
 				47B418122BF7656D00F449A7 /* PreloaderViewModel.swift in Sources */,

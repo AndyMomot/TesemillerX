@@ -15,10 +15,14 @@ struct ContentView: View {
             if viewModel.showPreloader {
                 PreloaderView()
             } else {
-                if viewModel.isAuthorized {
+                switch viewModel.viewState {
+                case .onboarding:
+                    OnboardingViewTabView()
+                        .environmentObject(viewModel)
+                case .privacy:
+                    Text("Privacy")
+                case .main:
                     Text("Home")
-                } else {
-                    Text("Auth")
                 }
             }
         }
