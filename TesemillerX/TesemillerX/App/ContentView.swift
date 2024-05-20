@@ -20,15 +20,16 @@ struct ContentView: View {
                     OnboardingViewTabView()
                         .environmentObject(viewModel)
                 case .privacy:
-                    Text("Privacy")
+                    PrivacyPolicyView()
+                        .environmentObject(viewModel)
                 case .main:
                     Text("Home")
                 }
             }
         }
         .onAppear {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                self.viewModel.showPreloader.toggle()
+            withAnimation {
+                self.viewModel.getFlow()
             }
         }
     }

@@ -38,6 +38,7 @@ internal enum Asset {
   internal static let onb1 = ImageAsset(name: "onb1")
   internal static let onb2 = ImageAsset(name: "onb2")
   internal static let onb3 = ImageAsset(name: "onb3")
+  internal static let pp = ImageAsset(name: "pp")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 
