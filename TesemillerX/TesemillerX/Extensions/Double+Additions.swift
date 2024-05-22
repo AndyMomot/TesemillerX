@@ -18,7 +18,9 @@ extension Double {
         numberFormatter.minimumFractionDigits = 1
         numberFormatter.maximumFractionDigits = maximumFractionDigits
         numberFormatter.decimalSeparator = decimalSeparator
-
+        numberFormatter.groupingSeparator = " " // Use a space as the grouping separator
+        numberFormatter.groupingSize = 3
+        
         if let formattedString = numberFormatter.string(from: NSNumber(value: self)) {
            return formattedString // Output: "2 500,00"
         } else {

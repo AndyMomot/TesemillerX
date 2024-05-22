@@ -23,7 +23,8 @@ struct ContentView: View {
                     PrivacyPolicyView()
                         .environmentObject(viewModel)
                 case .main:
-                    Text("Home")
+                    TabBar()
+                        .environmentObject(viewModel)
                 }
             }
         }
