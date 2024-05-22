@@ -34,11 +34,14 @@ internal enum Asset {
   internal static let rectangle36 = ImageAsset(name: "Rectangle36")
   internal static let dots = ImageAsset(name: "dots")
   internal static let gradientBackground = ImageAsset(name: "gradientBackground")
+  internal static let homeTab = ImageAsset(name: "homeTab")
   internal static let logoShort = ImageAsset(name: "logoShort")
+  internal static let notificationTab = ImageAsset(name: "notificationTab")
   internal static let onb1 = ImageAsset(name: "onb1")
   internal static let onb2 = ImageAsset(name: "onb2")
   internal static let onb3 = ImageAsset(name: "onb3")
   internal static let pp = ImageAsset(name: "pp")
+  internal static let settingsTab = ImageAsset(name: "settingsTab")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 
