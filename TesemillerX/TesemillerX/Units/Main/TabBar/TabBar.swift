@@ -13,28 +13,12 @@ struct TabBar: View {
     var body: some View {
         ZStack(alignment: .bottom) {
             TabView(selection: $viewModel.selection) {
-                ZStack {
-                    BackgroundGradientView()
-                        .ignoresSafeArea()
-                    
-                    ScrollView {
-                        VStack {
-                            Rectangle()
-                                .frame(height: 300)
-                            Rectangle()
-                                .frame(height: 300)
-                            Rectangle()
-                                .frame(height: 300)
-                            Rectangle()
-                                .frame(height: 300)
-                        }
-                    }
-                }
+                Text("profile")
                 .tag(TabBarSelectionView.profile.rawValue)
                 .environmentObject(viewModel)
                 
                 
-                Text("home")
+                HomeView()
                     .tag(TabBarSelectionView.home.rawValue)
                     .environmentObject(viewModel)
                 
@@ -47,7 +31,7 @@ struct TabBar: View {
                     .environmentObject(viewModel)
             }
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-            .edgesIgnoringSafeArea(.all)
+            .edgesIgnoringSafeArea(.bottom)
             
             ZStack(alignment: .bottom) {
                 TabBarView(selectedItem: $viewModel.selection)
