@@ -18,6 +18,10 @@
 		477736172BFE71A800134EDE /* View+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477736122BFE71A800134EDE /* View+Additions.swift */; };
 		477736182BFE71A800134EDE /* String+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477736132BFE71A800134EDE /* String+Additions.swift */; };
 		4777361E2BFE746500134EDE /* DepositProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4777361D2BFE746500134EDE /* DepositProgressView.swift */; };
+		47A84ABF2BFFAE93002071CC /* CreatBudgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A84ABE2BFFAE93002071CC /* CreatBudgetView.swift */; };
+		47A84AC22BFFB0B0002071CC /* CustomPlusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A84AC12BFFB0B0002071CC /* CustomPlusButton.swift */; };
+		47A84AC52BFFBD67002071CC /* InputFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A84AC42BFFBD67002071CC /* InputFieldView.swift */; };
+		47A84AC82BFFC48D002071CC /* InputFieldResizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A84AC72BFFC48D002071CC /* InputFieldResizable.swift */; };
 		47B417352BF73CAB00F449A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B417342BF73CAB00F449A7 /* AppDelegate.swift */; };
 		47B4173E2BF73CAC00F449A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47B4173D2BF73CAC00F449A7 /* Assets.xcassets */; };
 		47B417412BF73CAC00F449A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47B4173F2BF73CAC00F449A7 /* LaunchScreen.storyboard */; };
@@ -71,6 +75,10 @@
 		477736122BFE71A800134EDE /* View+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+Additions.swift"; sourceTree = "<group>"; };
 		477736132BFE71A800134EDE /* String+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Additions.swift"; sourceTree = "<group>"; };
 		4777361D2BFE746500134EDE /* DepositProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepositProgressView.swift; sourceTree = "<group>"; };
+		47A84ABE2BFFAE93002071CC /* CreatBudgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatBudgetView.swift; sourceTree = "<group>"; };
+		47A84AC12BFFB0B0002071CC /* CustomPlusButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPlusButton.swift; sourceTree = "<group>"; };
+		47A84AC42BFFBD67002071CC /* InputFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFieldView.swift; sourceTree = "<group>"; };
+		47A84AC72BFFC48D002071CC /* InputFieldResizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFieldResizable.swift; sourceTree = "<group>"; };
 		47B417312BF73CAB00F449A7 /* TesemillerX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TesemillerX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47B417342BF73CAB00F449A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47B4173D2BF73CAC00F449A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -169,6 +177,7 @@
 		477736192BFE743F00134EDE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				47A84ABD2BFFAE7E002071CC /* CreatBudget */,
 				4777361C2BFE745F00134EDE /* DepositProgress */,
 			);
 			path = Views;
@@ -180,6 +189,38 @@
 				4777361D2BFE746500134EDE /* DepositProgressView.swift */,
 			);
 			path = DepositProgress;
+			sourceTree = "<group>";
+		};
+		47A84ABD2BFFAE7E002071CC /* CreatBudget */ = {
+			isa = PBXGroup;
+			children = (
+				47A84ABE2BFFAE93002071CC /* CreatBudgetView.swift */,
+			);
+			path = CreatBudget;
+			sourceTree = "<group>";
+		};
+		47A84AC02BFFB09F002071CC /* CustomPlusButton */ = {
+			isa = PBXGroup;
+			children = (
+				47A84AC12BFFB0B0002071CC /* CustomPlusButton.swift */,
+			);
+			path = CustomPlusButton;
+			sourceTree = "<group>";
+		};
+		47A84AC32BFFBD67002071CC /* InputField */ = {
+			isa = PBXGroup;
+			children = (
+				47A84AC42BFFBD67002071CC /* InputFieldView.swift */,
+			);
+			path = InputField;
+			sourceTree = "<group>";
+		};
+		47A84AC62BFFC48D002071CC /* InputFieldResizable */ = {
+			isa = PBXGroup;
+			children = (
+				47A84AC72BFFC48D002071CC /* InputFieldResizable.swift */,
+			);
+			path = InputFieldResizable;
 			sourceTree = "<group>";
 		};
 		47B417282BF73CAB00F449A7 = {
@@ -308,6 +349,9 @@
 		47B418132BF7679C00F449A7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				47A84AC62BFFC48D002071CC /* InputFieldResizable */,
+				47A84AC32BFFBD67002071CC /* InputField */,
+				47A84AC02BFFB09F002071CC /* CustomPlusButton */,
 				47F7C98E2BFBA16B00F082BD /* CheckBox */,
 				47F7C9902BFBA16B00F082BD /* WebView */,
 				47B418202BF771A500F449A7 /* Loader */,
@@ -509,11 +553,13 @@
 				47B417352BF73CAB00F449A7 /* AppDelegate.swift in Sources */,
 				477736162BFE71A800134EDE /* Comparable+Additions.swift in Sources */,
 				4777361E2BFE746500134EDE /* DepositProgressView.swift in Sources */,
+				47A84AC82BFFC48D002071CC /* InputFieldResizable.swift in Sources */,
 				47F7C9662BFB28F300F082BD /* OnboardingView.swift in Sources */,
 				47B418152BF767C000F449A7 /* BackgroundGradientView.swift in Sources */,
 				47B4181D2BF76FFB00F449A7 /* Strings.generated.swift in Sources */,
 				47B418192BF76FE500F449A7 /* Images.generated.swift in Sources */,
 				477736182BFE71A800134EDE /* String+Additions.swift in Sources */,
+				47A84ABF2BFFAE93002071CC /* CreatBudgetView.swift in Sources */,
 				47F7C9642BFB289E00F082BD /* OnboardingViewTabView.swift in Sources */,
 				47B418222BF771BA00F449A7 /* LoaderView.swift in Sources */,
 				47B4174D2BF741F400F449A7 /* ContentView.swift in Sources */,
@@ -523,9 +569,11 @@
 				477736142BFE71A800134EDE /* Double+Additions.swift in Sources */,
 				477736082BFE5A8100134EDE /* TabBarViewModel.swift in Sources */,
 				477736152BFE71A800134EDE /* Date+Additions.swift in Sources */,
+				47A84AC22BFFB0B0002071CC /* CustomPlusButton.swift in Sources */,
 				47B4174B2BF741F400F449A7 /* SceneDelegate.swift in Sources */,
 				47B418102BF7653A00F449A7 /* PreloaderView.swift in Sources */,
 				47B4181B2BF76FF100F449A7 /* Colors.generated.swift in Sources */,
+				47A84AC52BFFBD67002071CC /* InputFieldView.swift in Sources */,
 				4777360D2BFE704400134EDE /* HomeViewModel.swift in Sources */,
 				477736072BFE5A8100134EDE /* TabBarView.swift in Sources */,
 				477736172BFE71A800134EDE /* View+Additions.swift in Sources */,
