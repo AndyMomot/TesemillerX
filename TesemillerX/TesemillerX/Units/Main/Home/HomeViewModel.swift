@@ -14,3 +14,11 @@ extension HomeView {
         @Published var myAmount: Double = 0
     }
 }
+
+extension HomeView.HomeViewModel {
+    struct Profile: Identifiable, Codable {
+        private(set) var id = UUID().uuidString
+        var firstName: String
+        var lastName: String
+    }
+}

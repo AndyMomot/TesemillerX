@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47196EA12C00B331002189A2 /* AddMemberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47196EA02C00B331002189A2 /* AddMemberView.swift */; };
+		47196EA32C00C7A0002189A2 /* AddMemberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47196EA22C00C7A0002189A2 /* AddMemberViewModel.swift */; };
+		47196EA52C00CBAD002189A2 /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47196EA42C00CBAD002189A2 /* PersonCell.swift */; };
+		47196EA82C00D171002189A2 /* CreatePersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47196EA72C00D171002189A2 /* CreatePersonView.swift */; };
+		47196EAA2C00D17A002189A2 /* CreatePersonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47196EA92C00D17A002189A2 /* CreatePersonViewModel.swift */; };
+		47196EAE2C00D2DA002189A2 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47196EAD2C00D2DA002189A2 /* ImagePicker.swift */; };
 		477736062BFE5A8100134EDE /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477736032BFE5A8000134EDE /* TabBar.swift */; };
 		477736072BFE5A8100134EDE /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477736042BFE5A8000134EDE /* TabBarView.swift */; };
 		477736082BFE5A8100134EDE /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477736052BFE5A8000134EDE /* TabBarViewModel.swift */; };
@@ -64,6 +70,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		47196EA02C00B331002189A2 /* AddMemberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemberView.swift; sourceTree = "<group>"; };
+		47196EA22C00C7A0002189A2 /* AddMemberViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemberViewModel.swift; sourceTree = "<group>"; };
+		47196EA42C00CBAD002189A2 /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
+		47196EA72C00D171002189A2 /* CreatePersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePersonView.swift; sourceTree = "<group>"; };
+		47196EA92C00D17A002189A2 /* CreatePersonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePersonViewModel.swift; sourceTree = "<group>"; };
+		47196EAD2C00D2DA002189A2 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		477736032BFE5A8000134EDE /* TabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		477736042BFE5A8000134EDE /* TabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		477736052BFE5A8000134EDE /* TabBarViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
@@ -133,6 +145,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		47196E9F2C00B317002189A2 /* AddMemberView */ = {
+			isa = PBXGroup;
+			children = (
+				47196EA02C00B331002189A2 /* AddMemberView.swift */,
+				47196EA22C00C7A0002189A2 /* AddMemberViewModel.swift */,
+				47196EA42C00CBAD002189A2 /* PersonCell.swift */,
+			);
+			path = AddMemberView;
+			sourceTree = "<group>";
+		};
+		47196EA62C00D150002189A2 /* CreatePerson */ = {
+			isa = PBXGroup;
+			children = (
+				47196EA72C00D171002189A2 /* CreatePersonView.swift */,
+				47196EA92C00D17A002189A2 /* CreatePersonViewModel.swift */,
+			);
+			path = CreatePerson;
+			sourceTree = "<group>";
+		};
+		47196EAB2C00D294002189A2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				47196EAC2C00D2DA002189A2 /* ImagePicker */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		47196EAC2C00D2DA002189A2 /* ImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				47196EAD2C00D2DA002189A2 /* ImagePicker.swift */,
+			);
+			path = ImagePicker;
+			sourceTree = "<group>";
+		};
 		477735FE2BFE59D700134EDE /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +202,8 @@
 		477736092BFE702F00134EDE /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				47196E9F2C00B317002189A2 /* AddMemberView */,
+				47196EA62C00D150002189A2 /* CreatePerson */,
 				477736192BFE743F00134EDE /* Views */,
 				4777360A2BFE703D00134EDE /* HomeView.swift */,
 				4777360C2BFE704400134EDE /* HomeViewModel.swift */,
@@ -243,6 +292,7 @@
 		47B417332BF73CAB00F449A7 /* TesemillerX */ = {
 			isa = PBXGroup;
 			children = (
+				47196EAB2C00D294002189A2 /* Helpers */,
 				4777360E2BFE71A800134EDE /* Extensions */,
 				47F7C9972BFBA55700F082BD /* Services */,
 				47B4174E2BF7424500F449A7 /* App */,
@@ -544,7 +594,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47196EA52C00CBAD002189A2 /* PersonCell.swift in Sources */,
+				47196EA12C00B331002189A2 /* AddMemberView.swift in Sources */,
 				47B4174C2BF741F400F449A7 /* ViewController.swift in Sources */,
+				47196EAE2C00D2DA002189A2 /* ImagePicker.swift in Sources */,
 				47F7C99C2BFBA55700F082BD /* DefaultsService.swift in Sources */,
 				47F7C99D2BFBA55700F082BD /* FileManagerService.swift in Sources */,
 				4777360B2BFE703D00134EDE /* HomeView.swift in Sources */,
@@ -570,9 +623,12 @@
 				477736082BFE5A8100134EDE /* TabBarViewModel.swift in Sources */,
 				477736152BFE71A800134EDE /* Date+Additions.swift in Sources */,
 				47A84AC22BFFB0B0002071CC /* CustomPlusButton.swift in Sources */,
+				47196EAA2C00D17A002189A2 /* CreatePersonViewModel.swift in Sources */,
 				47B4174B2BF741F400F449A7 /* SceneDelegate.swift in Sources */,
 				47B418102BF7653A00F449A7 /* PreloaderView.swift in Sources */,
 				47B4181B2BF76FF100F449A7 /* Colors.generated.swift in Sources */,
+				47196EA82C00D171002189A2 /* CreatePersonView.swift in Sources */,
+				47196EA32C00C7A0002189A2 /* AddMemberViewModel.swift in Sources */,
 				47A84AC52BFFBD67002071CC /* InputFieldView.swift in Sources */,
 				4777360D2BFE704400134EDE /* HomeViewModel.swift in Sources */,
 				477736072BFE5A8100134EDE /* TabBarView.swift in Sources */,

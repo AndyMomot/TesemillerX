@@ -30,5 +30,5 @@ struct InputFieldResizable: View {
 #Preview {
     InputFieldResizable(title: "Opis",
                         text: .constant("Lorem ipsum dolor sit amet consectetur. Eget velit vitae nec dictum Massa Phasellus. Urna sem facilisis purus vitae sollicitudin praesent. Imperdiet vitae tellus aliquam porttitor justo. Enim at sed at duis adipiscing tellus ornare leo ut."))
-    .frame(maxHeight: 150)
+    .frame(minHeight: 150)
 }

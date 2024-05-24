@@ -41,6 +41,7 @@ internal enum Asset {
   internal static let onb2 = ImageAsset(name: "onb2")
   internal static let onb3 = ImageAsset(name: "onb3")
   internal static let pp = ImageAsset(name: "pp")
+  internal static let searchWhite = ImageAsset(name: "searchWhite")
   internal static let settingsTab = ImageAsset(name: "settingsTab")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
