@@ -9,12 +9,13 @@ import SwiftUI
 
 struct CreatePersonView: View {
     @StateObject private var viewModel = CreatePersonViewModel()
+    @Environment(\.dismiss) var dismiss
     
     var body: some View {
         VStack(spacing: 20) {
             ScrollView(showsIndicators: false) {
                 VStack(spacing: 10) {
-                    viewModel.selectedImage
+                    Image(uiImage: viewModel.selectedImage)
                         .resizable()
                         .scaledToFill()
                         .frame(width: 200, height: 200)
@@ -46,7 +47,9 @@ struct CreatePersonView: View {
             
             // Add profile button
             Button {
-                
+                viewModel.savePerson {
+                    dismiss.callAsFunction()
+                }
             } label: {
                 HStack {
                     Spacer()

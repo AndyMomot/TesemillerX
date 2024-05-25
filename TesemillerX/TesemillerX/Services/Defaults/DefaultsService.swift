@@ -23,9 +23,28 @@ extension DefaultsService {
     }
 }
 
+extension DefaultsService {
+    static func getProfiles() -> [HomeView.HomeViewModel.Profile] {
+        if let data = standard.object(forKey: Keys.profiles.rawValue) as? Data {
+            let items = try? JSONDecoder().decode([HomeView.HomeViewModel.Profile].self, from: data)
+            return items ?? []
+        }
+        return []
+    }
+    
+    static func saveProfile(item: HomeView.HomeViewModel.Profile) {
+        var profiles = getProfiles()
+        profiles.append(item)
+        if let data = try? JSONEncoder().encode(profiles) {
+            standard.set(data, forKey: Keys.profiles.rawValue)
+        }
+    }
+}
+
 // MARK: - Keys
 extension DefaultsService {
     enum Keys: String {
         case flow
+        case profiles
     }
 }

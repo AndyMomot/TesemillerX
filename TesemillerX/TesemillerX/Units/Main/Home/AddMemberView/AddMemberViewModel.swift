@@ -21,7 +21,7 @@ extension AddMemberView {
 
 extension AddMemberView.AddMemberViewModel {
     func getProfileImage(for id: String) -> Image? {
-        let path = "profileImage/\(id)"
+        let path = FileManagerService.Keys.profileImage(id: id).path
         guard let data = FileManagerService().getFile(forPath: path),
               let uiImage = UIImage(data: data)
         else {
@@ -29,6 +29,12 @@ extension AddMemberView.AddMemberViewModel {
         }
         
         return Image(uiImage: uiImage)
+    }
+    
+    func getSavedProfiles() {
+        DispatchQueue.main.async {
+            self.savedProfiles = DefaultsService.getProfiles()
+        }
     }
     
     func removeProfileFromStack(profile id: String) {

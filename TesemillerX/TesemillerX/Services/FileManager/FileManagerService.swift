@@ -53,3 +53,16 @@ struct FileManagerService {
         }
     }
 }
+
+extension FileManagerService {
+    enum Keys {
+        case profileImage(id: String)
+        
+        var path: String {
+            switch self {
+            case .profileImage(let id):
+                return "profileImage\(id)"
+            }
+        }
+    }
+}

@@ -44,6 +44,7 @@ struct AddMemberView: View {
                             Button {
                                 withAnimation {
                                     viewModel.showAddPerson.toggle()
+                                    viewModel.getSavedProfiles()
                                 }
                             } label: {
                                 Circle()
@@ -106,12 +107,14 @@ struct AddMemberView: View {
                                 }
                         }
                     }
+                    .padding()
                     
                     // Profile list
                     List {
                         ForEach(viewModel.savedProfiles) { profile in
                             PersonCell(profile: profile)
                         }
+                        .listRowBackground(Color.clear)
                     }
                     .listStyle(PlainListStyle())
                     
@@ -135,9 +138,8 @@ struct AddMemberView: View {
                         .clipShape(RoundedRectangle(cornerRadius: 24))
                         .padding(.horizontal, 60)
                     }
-
+                    .padding()
                 }
-                .padding()
                 .background(
                     Rectangle()
                         .foregroundStyle(Colors.grayLite.swiftUIColor)

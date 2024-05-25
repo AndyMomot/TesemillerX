@@ -16,7 +16,7 @@ struct PersonCell: View {
         HStack(spacing: 22) {
             image
                 .resizable()
-                .scaledToFit()
+                .scaledToFill()
                 .frame(width: 51)
                 .clipShape(Circle())
             
@@ -40,7 +40,7 @@ struct PersonCell: View {
 
 extension PersonCell {
     func getProfileImage(for id: String) -> Image? {
-        let path = "profileImage/\(id)"
+        let path = FileManagerService.Keys.profileImage(id: id).path
         guard let data = FileManagerService().getFile(forPath: path),
               let uiImage = UIImage(data: data)
         else {
