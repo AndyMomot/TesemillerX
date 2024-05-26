@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct CreatePersonView: View {
+    var onDismiss: () -> Void
+    
     @StateObject private var viewModel = CreatePersonViewModel()
     @Environment(\.dismiss) var dismiss
     
@@ -34,10 +36,12 @@ struct CreatePersonView: View {
                 
                 VStack {
                     InputFieldView(placeholder: "Imię",
+                                   rightView: EmptyView(),
                                    text: $viewModel.firstName)
                     .frame(height: 48)
                     
                     InputFieldView(placeholder: "Nazwisko",
+                                   rightView: EmptyView(),
                                    text: $viewModel.lastName)
                     .frame(height: 48)
                 }
@@ -49,6 +53,7 @@ struct CreatePersonView: View {
             Button {
                 viewModel.savePerson {
                     dismiss.callAsFunction()
+                    onDismiss()
                 }
             } label: {
                 HStack {
@@ -73,5 +78,5 @@ struct CreatePersonView: View {
 }
 
 #Preview {
-    CreatePersonView()
+    CreatePersonView() {}
 }

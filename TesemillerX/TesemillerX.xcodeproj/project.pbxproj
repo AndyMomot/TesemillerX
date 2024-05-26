@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		470A28C02C033DE200CA7CC0 /* CreateBudgetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470A28BF2C033DE200CA7CC0 /* CreateBudgetViewModel.swift */; };
 		47196EA12C00B331002189A2 /* AddMemberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47196EA02C00B331002189A2 /* AddMemberView.swift */; };
 		47196EA32C00C7A0002189A2 /* AddMemberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47196EA22C00C7A0002189A2 /* AddMemberViewModel.swift */; };
 		47196EA52C00CBAD002189A2 /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47196EA42C00CBAD002189A2 /* PersonCell.swift */; };
@@ -70,6 +71,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		470A28BF2C033DE200CA7CC0 /* CreateBudgetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateBudgetViewModel.swift; sourceTree = "<group>"; };
 		47196EA02C00B331002189A2 /* AddMemberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemberView.swift; sourceTree = "<group>"; };
 		47196EA22C00C7A0002189A2 /* AddMemberViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemberViewModel.swift; sourceTree = "<group>"; };
 		47196EA42C00CBAD002189A2 /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				47A84ABE2BFFAE93002071CC /* CreatBudgetView.swift */,
+				470A28BF2C033DE200CA7CC0 /* CreateBudgetViewModel.swift */,
 			);
 			path = CreatBudget;
 			sourceTree = "<group>";
@@ -604,6 +607,7 @@
 				47B418242BF77ABC00F449A7 /* ContentViewModel.swift in Sources */,
 				47F7C9962BFBA3D700F082BD /* PrivacyPolicyViewModel.swift in Sources */,
 				47B417352BF73CAB00F449A7 /* AppDelegate.swift in Sources */,
+				470A28C02C033DE200CA7CC0 /* CreateBudgetViewModel.swift in Sources */,
 				477736162BFE71A800134EDE /* Comparable+Additions.swift in Sources */,
 				4777361E2BFE746500134EDE /* DepositProgressView.swift in Sources */,
 				47A84AC82BFFC48D002071CC /* InputFieldResizable.swift in Sources */,

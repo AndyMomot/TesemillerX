@@ -39,12 +39,44 @@ extension DefaultsService {
             standard.set(data, forKey: Keys.profiles.rawValue)
         }
     }
+    
+    static func saveProfile(items: [HomeView.HomeViewModel.Profile]) {
+        if let data = try? JSONEncoder().encode(items) {
+            standard.set(data, forKey: Keys.profiles.rawValue)
+        }
+    }
 }
+
+extension DefaultsService {
+    static func getBudgets() -> [CreateBudgetView.BudgetModel] {
+        if let data = standard.object(forKey: Keys.budget.rawValue) as? Data {
+            let items = try? JSONDecoder().decode([CreateBudgetView.BudgetModel].self, from: data)
+            return items ?? []
+        }
+        return []
+    }
+    
+    static func saveBudget(item: CreateBudgetView.BudgetModel) {
+        var items = getBudgets()
+        items.append(item)
+        if let data = try? JSONEncoder().encode(items) {
+            standard.set(data, forKey: Keys.budget.rawValue)
+        }
+    }
+    
+    static func saveProfile(items: [CreateBudgetView.BudgetModel]) {
+        if let data = try? JSONEncoder().encode(items) {
+            standard.set(data, forKey: Keys.budget.rawValue)
+        }
+    }
+}
+
 
 // MARK: - Keys
 extension DefaultsService {
     enum Keys: String {
         case flow
         case profiles
+        case budget
     }
 }

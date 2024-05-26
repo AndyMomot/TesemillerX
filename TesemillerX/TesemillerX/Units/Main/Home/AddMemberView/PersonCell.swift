@@ -17,7 +17,7 @@ struct PersonCell: View {
             image
                 .resizable()
                 .scaledToFill()
-                .frame(width: 51)
+                .frame(width: 51, height: 51)
                 .clipShape(Circle())
             
             Text("\(profile.firstName) \(profile.lastName)")

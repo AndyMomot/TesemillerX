@@ -10,54 +10,60 @@ import SwiftUI
 struct AddMemberView: View {
     @StateObject private var viewModel = AddMemberViewModel()
     
+    var selectedProfiles: (([HomeView.HomeViewModel.Profile]) -> Void)?
+    
     var body: some View {
         VStack(spacing: .zero) {
+            let imageSize: CGFloat = 47
+            
+            // Plus button
             Rectangle()
                 .foregroundStyle(Colors.grayMiddle.swiftUIColor)
                 .frame(height: 66)
                 .overlay {
                     HStack {
-                        let imageSize: CGFloat = 47
-                        
-                        // Profile image buttons
-                        ForEach(viewModel.selectedProfiles) { profile in
-                            if let image = viewModel.getProfileImage(for: profile.id) {
-                                
-                                Button {
-                                    withAnimation {
-                                        viewModel.removeProfileFromStack(profile: profile.id)
-                                    }
-                                } label: {
-                                    image
-                                        .resizable()
-                                        .scaledToFill()
-                                        .frame(width: imageSize,
-                                               height: imageSize)
-                                        .clipShape(Circle())
-                                }
-                                
+                        Button {
+                            withAnimation {
+                                viewModel.showAddPerson.toggle()
+                                viewModel.getSavedProfiles()
                             }
+                        } label: {
+                            Circle()
+                                .frame(width: imageSize,
+                                       height: imageSize)
+                                .foregroundStyle(.clear)
+                                .overlay {
+                                    let imageName = viewModel.showAddPerson ? "minus" : "plus"
+                                    
+                                    Image(systemName: imageName)
+                                        .resizable()
+                                        .scaledToFit()
+                                        .foregroundStyle(.white)
+                                        .padding(12)
+                                }
                         }
                         
-                        // Plus button
-                        if viewModel.selectedProfiles.count < 4 {
-                            Button {
-                                withAnimation {
-                                    viewModel.showAddPerson.toggle()
-                                    viewModel.getSavedProfiles()
-                                }
-                            } label: {
-                                Circle()
-                                    .frame(width: imageSize,
-                                           height: imageSize)
-                                    .foregroundStyle(.clear)
-                                    .overlay {
-                                        Image(systemName: "plus")
-                                            .resizable()
-                                            .scaledToFit()
-                                            .foregroundStyle(.white)
-                                            .padding(12)
+                        // Profile image buttons
+                        ScrollView(.horizontal) {
+                            HStack {
+                                ForEach(viewModel.selectedProfiles) { profile in
+                                    if let image = viewModel.getProfileImage(for: profile.id) {
+                                        
+                                        Button {
+                                            withAnimation {
+                                                viewModel.removeProfileFromStack(profile: profile.id)
+                                            }
+                                        } label: {
+                                            image
+                                                .resizable()
+                                                .scaledToFill()
+                                                .frame(width: imageSize,
+                                                       height: imageSize)
+                                                .clipShape(Circle())
+                                        }
+                                        
                                     }
+                                }
                             }
                         }
                         
@@ -84,28 +90,23 @@ struct AddMemberView: View {
                             .foregroundStyle(.white)
                             .frame(height: 49)
                             .overlay {
-                                TextField(text: $viewModel.searchText) {
-                                    Text("Szukaj")
+                                HStack {
+                                    Asset.searchWhite.swiftUIImage
+                                        .renderingMode(.template)
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 22, height: 22)
+                                        .foregroundStyle(Colors.grayMiddle.swiftUIColor).opacity(0.5)
+                                    
+                                    
+                                    TextField(text: $viewModel.searchText) {
+                                        Text("Szukaj")
+                                    }
+                                    .foregroundStyle(Colors.blackCustom.swiftUIColor)
+                                    .font(Fonts.KulimPark.regular.swiftUIFont(size: 14))
                                 }
-                                .foregroundStyle(Colors.blackCustom.swiftUIColor)
-                                .font(Fonts.KulimPark.regular.swiftUIFont(size: 14))
                                 .padding()
                             }
-                        
-                        Button {
-                            
-                        } label: {
-                            Asset.searchWhite.swiftUIImage
-                                .resizable()
-                                .scaledToFit()
-                                .frame(height: 22)
-                                .padding(.horizontal, 30)
-                                .padding(.vertical)
-                                .background {
-                                    RoundedRectangle(cornerRadius: 25.0)
-                                        .foregroundStyle(Colors.grayMiddle.swiftUIColor)
-                                }
-                        }
                     }
                     .padding()
                     
@@ -113,10 +114,18 @@ struct AddMemberView: View {
                     List {
                         ForEach(viewModel.savedProfiles) { profile in
                             PersonCell(profile: profile)
+                                .onTapGesture {
+                                    withAnimation {
+                                        viewModel.addSelected(profile: profile)
+                                    }
+                                    selectedProfiles?(viewModel.getSelectedProfiles())
+                                }
                         }
+                        .onDelete(perform: viewModel.deleteItem)
                         .listRowBackground(Color.clear)
                     }
                     .listStyle(PlainListStyle())
+                    .frame(minHeight: 150)
                     
                     // Add profile button
                     Button {
@@ -150,7 +159,16 @@ struct AddMemberView: View {
             }
         }
         .sheet(isPresented: $viewModel.showCreatePerson) {
-            CreatePersonView()
+            CreatePersonView() {
+                withAnimation {
+                    viewModel.getSavedProfiles()
+                }
+            }
+        }
+        .onChange(of: viewModel.searchText) { newValue in
+            withAnimation {
+                viewModel.filterProfiles()
+            }
         }
     }
 }

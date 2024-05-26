@@ -7,9 +7,10 @@
 
 import SwiftUI
 
-struct InputFieldView: View {
+struct InputFieldView<RightView: View>: View {
     var placeholder: String
-    var rightImage: Image?
+    var rightView: RightView
+    var canEdit = true
     
     @Binding var text: String
     var onRightView: (() -> Void)?
@@ -19,25 +20,29 @@ struct InputFieldView: View {
             .foregroundStyle(Colors.grayLite.swiftUIColor)
             .overlay {
                 HStack {
-                    TextField(text: $text) {
-                        Text(placeholder)
+                    if canEdit {
+                        TextField(text: $text) {
+                            Text(placeholder)
+                                .foregroundColor(.white)
+                                .font(Fonts.KulimPark.regular.swiftUIFont(size: 20))
+                        }
+                        .foregroundColor(.white)
+                        .font(Fonts.KulimPark.regular.swiftUIFont(size: 20))
+                        .background(Colors.grayLite.swiftUIColor)
+                    } else {
+                        
+                        let textToShow = text.isEmpty ? placeholder : text
+                        Text(textToShow)
                             .foregroundColor(.white)
                             .font(Fonts.KulimPark.regular.swiftUIFont(size: 20))
-                    }
-                    .foregroundColor(.white)
-                    .font(Fonts.KulimPark.regular.swiftUIFont(size: 20))
-                    .background(Colors.grayLite.swiftUIColor)
-                    
-                    if let image = rightImage {
-                        Button {
-                            onRightView?()
-                        } label: {
-                            image
-                                .resizable()
-                                .scaledToFit()
-                                .foregroundStyle(.white)
-                        }
                         
+                        Spacer()
+                    }
+                    
+                    Button {
+                        onRightView?()
+                    } label: {
+                        rightView
                     }
                 }
                 .padding()
@@ -51,7 +56,7 @@ struct InputFieldView_Previews: PreviewProvider {
             Colors.grayMiddle.swiftUIColor
             
             InputFieldView(placeholder: "Input text",
-                           rightImage: Image(systemName: "plus"),
+                           rightView: EmptyView(),
                            text: .constant(""))
         }
         .frame(height: 50)
