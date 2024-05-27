@@ -120,6 +120,7 @@ struct CreateBudgetView: View {
                 
                 Spacer()
             }
+            .padding(.bottom, UIScreen.main.bounds.height * 0.05)
             .onTapGesture {
                 withAnimation {
                     hideKeyboard()

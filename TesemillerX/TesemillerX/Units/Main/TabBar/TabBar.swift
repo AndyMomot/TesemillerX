@@ -11,11 +11,11 @@ struct TabBar: View {
     @StateObject private var viewModel = TabBarViewModel()
     
     var body: some View {
-        ZStack(alignment: .bottom) {
+        GeometryReader { geometry in
             TabView(selection: $viewModel.selection) {
                 Text("profile")
-                .tag(TabBarSelectionView.profile.rawValue)
-                .environmentObject(viewModel)
+                    .tag(TabBarSelectionView.profile.rawValue)
+                    .environmentObject(viewModel)
                 
                 
                 HomeView()
@@ -32,12 +32,14 @@ struct TabBar: View {
             }
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
             .edgesIgnoringSafeArea(.bottom)
-            
-            ZStack(alignment: .bottom) {
-                TabBarView(selectedItem: $viewModel.selection)
-                    .frame(height: UIScreen.main.bounds.height * 0.06)
+            .overlay {
+                VStack {
+                    Spacer()
+                    TabBarView(selectedItem: $viewModel.selection)
+                }
+                .padding(.horizontal)
+                .padding(.bottom, -geometry.safeAreaInsets.bottom / 2)
             }
-            .padding(.horizontal)
         }
     }
 }
