@@ -93,7 +93,7 @@
 		47A84AC12BFFB0B0002071CC /* CustomPlusButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPlusButton.swift; sourceTree = "<group>"; };
 		47A84AC42BFFBD67002071CC /* InputFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFieldView.swift; sourceTree = "<group>"; };
 		47A84AC72BFFC48D002071CC /* InputFieldResizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFieldResizable.swift; sourceTree = "<group>"; };
-		47B417312BF73CAB00F449A7 /* TesemillerX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TesemillerX.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		47B417312BF73CAB00F449A7 /* TesemiliX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TesemiliX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47B417342BF73CAB00F449A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47B4173D2BF73CAC00F449A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47B417402BF73CAC00F449A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -279,7 +279,7 @@
 			isa = PBXGroup;
 			children = (
 				47B417F22BF745EF00F449A7 /* swiftgen.yml */,
-				47B417332BF73CAB00F449A7 /* TesemillerX */,
+				47B417332BF73CAB00F449A7 /* TesemiliX */,
 				47B417322BF73CAB00F449A7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -287,12 +287,12 @@
 		47B417322BF73CAB00F449A7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				47B417312BF73CAB00F449A7 /* TesemillerX.app */,
+				47B417312BF73CAB00F449A7 /* TesemiliX.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		47B417332BF73CAB00F449A7 /* TesemillerX */ = {
+		47B417332BF73CAB00F449A7 /* TesemiliX */ = {
 			isa = PBXGroup;
 			children = (
 				47196EAB2C00D294002189A2 /* Helpers */,
@@ -306,7 +306,7 @@
 				47B4173F2BF73CAC00F449A7 /* LaunchScreen.storyboard */,
 				47B417422BF73CAC00F449A7 /* Info.plist */,
 			);
-			path = TesemillerX;
+			path = TesemiliX;
 			sourceTree = "<group>";
 		};
 		47B4174E2BF7424500F449A7 /* App */ = {
@@ -491,9 +491,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		47B417302BF73CAB00F449A7 /* TesemillerX */ = {
+		47B417302BF73CAB00F449A7 /* TesemiliX */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 47B417452BF73CAC00F449A7 /* Build configuration list for PBXNativeTarget "TesemillerX" */;
+			buildConfigurationList = 47B417452BF73CAC00F449A7 /* Build configuration list for PBXNativeTarget "TesemiliX" */;
 			buildPhases = (
 				47B4172D2BF73CAB00F449A7 /* Sources */,
 				47B4172E2BF73CAB00F449A7 /* Frameworks */,
@@ -504,9 +504,9 @@
 			);
 			dependencies = (
 			);
-			name = TesemillerX;
+			name = TesemiliX;
 			productName = TesemillerX;
-			productReference = 47B417312BF73CAB00F449A7 /* TesemillerX.app */;
+			productReference = 47B417312BF73CAB00F449A7 /* TesemiliX.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -524,7 +524,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 47B4172C2BF73CAB00F449A7 /* Build configuration list for PBXProject "TesemillerX" */;
+			buildConfigurationList = 47B4172C2BF73CAB00F449A7 /* Build configuration list for PBXProject "TesemiliX" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -537,7 +537,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				47B417302BF73CAB00F449A7 /* TesemillerX */,
+				47B417302BF73CAB00F449A7 /* TesemiliX */,
 			);
 		};
 /* End PBXProject section */
@@ -785,7 +785,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = AQV6DH83XK;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TesemillerX/Info.plist;
+				INFOPLIST_FILE = TesemiliX/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -817,7 +817,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = AQV6DH83XK;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TesemillerX/Info.plist;
+				INFOPLIST_FILE = TesemiliX/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -843,7 +843,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		47B4172C2BF73CAB00F449A7 /* Build configuration list for PBXProject "TesemillerX" */ = {
+		47B4172C2BF73CAB00F449A7 /* Build configuration list for PBXProject "TesemiliX" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				47B417432BF73CAC00F449A7 /* Debug */,
@@ -852,7 +852,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		47B417452BF73CAC00F449A7 /* Build configuration list for PBXNativeTarget "TesemillerX" */ = {
+		47B417452BF73CAC00F449A7 /* Build configuration list for PBXNativeTarget "TesemiliX" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				47B417462BF73CAC00F449A7 /* Debug */,

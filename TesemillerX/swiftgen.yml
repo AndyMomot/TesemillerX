@@ -1,31 +1,31 @@
 strings:
   inputs:
-    - TesemillerX/Resources/Localization
+    - TesemiliX/Resources/Localization
   outputs:
     - templateName: structured-swift5
-      output: TesemillerX/Resources/Localization/Strings.generated.swift
+      output: TesemiliX/Resources/Localization/Strings.generated.swift
       params:
         enumName: Strings
 
 xcassets:
   - inputs:
-    - TesemillerX/Resources/Images
+    - TesemiliX/Resources/Images
     outputs:
       - templateName: swift5
-        output: TesemillerX/Resources/Images/Images.generated.swift
+        output: TesemiliX/Resources/Images/Images.generated.swift
   - inputs:
-    - TesemillerX/Resources/Colors/Colors.xcassets
+    - TesemiliX/Resources/Colors/Colors.xcassets
     outputs:
       - templateName: swift5
-        output: TesemillerX/Resources/Colors/Colors.generated.swift
+        output: TesemiliX/Resources/Colors/Colors.generated.swift
         params:
           enumName: Colors
           
 fonts:
-  - inputs: TesemillerX/Resources/Fonts
+  - inputs: TesemiliX/Resources/Fonts
     outputs:
     - templateName: swift5
-      output: TesemillerX/Resources/Fonts/Fonts.generated.swift
+      output: TesemiliX/Resources/Fonts/Fonts.generated.swift
       params:
         enumName: Fonts
 
