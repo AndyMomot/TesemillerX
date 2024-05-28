@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AddMemberView: View {
     @StateObject private var viewModel = AddMemberViewModel()
-    
+    var completedPercent: Double?
     var selectedProfiles: (([HomeView.HomeViewModel.Profile]) -> Void)?
     
     var body: some View {
@@ -69,7 +69,7 @@ struct AddMemberView: View {
                         
                         Spacer()
                         
-                        if let percent = viewModel.completedPercent {
+                        if let percent = completedPercent {
                             Text(percent.string(maximumFractionDigits: 0) + "%")
                                 .foregroundStyle(Colors.greenCustom.swiftUIColor)
                                 .font(Fonts.KulimPark.bold.swiftUIFont(size: 32))

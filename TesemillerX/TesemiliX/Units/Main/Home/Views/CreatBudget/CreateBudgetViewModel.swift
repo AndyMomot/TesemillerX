@@ -60,5 +60,6 @@ extension CreateBudgetView {
         var date: Date?
         var description: String
         var amount: Double
+        var completed: Double = 0
     }
 }

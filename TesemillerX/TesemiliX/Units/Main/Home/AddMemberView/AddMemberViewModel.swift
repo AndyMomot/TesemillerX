@@ -12,7 +12,6 @@ extension AddMemberView {
     final class AddMemberViewModel: ObservableObject {
         @Published var savedProfiles: [HomeView.HomeViewModel.Profile] = []
         @Published var selectedProfiles: [HomeView.HomeViewModel.Profile] = []
-        @Published var completedPercent: Double? = 100
         @Published var showAddPerson = false
         @Published var showCreatePerson = false
         @Published var searchText = ""
