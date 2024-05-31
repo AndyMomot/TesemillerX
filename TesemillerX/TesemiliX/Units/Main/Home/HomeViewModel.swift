@@ -19,6 +19,7 @@ extension HomeView {
         
         func onAppear() {
             getBudgets()
+            showBudgetDetails = false
         }
         
         func getBudgets() {

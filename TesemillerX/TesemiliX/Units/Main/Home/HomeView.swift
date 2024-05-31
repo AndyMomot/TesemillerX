@@ -47,31 +47,32 @@ struct HomeView: View {
                                 totalAmount: viewModel.totalAmount,
                                 myAmount: viewModel.myAmount)
                             
+                            .padding(.horizontal)
+                            
                             Spacer(minLength: 50)
                             
                             VStack {
                                 ForEach(viewModel.budgets) { budget in
                                     BudgetView(model: budget) { // on derails
+                            
                                         viewModel.budgetToShow = budget
-                                        if let budget = viewModel.budgetToShow {
-                                            self.viewModel.showBudgetDetails.toggle()
-                                        }
+                                        self.viewModel.showBudgetDetails.toggle()
+                                        
                                     }
                                 }
                             }
                         }
-                        .padding(.horizontal)
                     }
                 }
-                .navigationDestination(
-                    isPresented: $viewModel.showBudgetDetails) {
-                        Text(viewModel.budgetToShow?.name ?? "Name")
-                     }
             }
             .onAppear {
                 viewModel.onAppear()
             }
-            
+            .navigationDestination(isPresented: $viewModel.showBudgetDetails) {
+                if let budget = viewModel.budgetToShow {
+                    BudgetDetailsView(budget: budget)
+                }
+            }
         }
     }
 }

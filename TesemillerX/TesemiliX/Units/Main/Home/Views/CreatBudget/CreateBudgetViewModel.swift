@@ -53,7 +53,7 @@ extension CreateBudgetView {
 }
 
 extension CreateBudgetView {
-    struct BudgetModel: Identifiable, Codable {
+    struct BudgetModel: Identifiable, Codable, Hashable {
         private(set) var id = UUID().uuidString
         var profiles: [HomeView.HomeViewModel.Profile]
         var name: String
@@ -61,5 +61,21 @@ extension CreateBudgetView {
         var description: String
         var amount: Double
         var completed: Double = 0
+        
+        var percent: Double { // 0...100
+            if completed > 0 && amount >= 0 {
+                return (completed / amount) * 100.0
+            } else {
+                return 0.0
+            }
+        }
+        
+        func hash(into hasher: inout Hasher) {
+            hasher.combine(id)
+        }
+        
+        static func == (lhs: CreateBudgetView.BudgetModel, rhs: CreateBudgetView.BudgetModel) -> Bool {
+            lhs.id == rhs.id
+        }
     }
 }

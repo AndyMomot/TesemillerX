@@ -24,9 +24,10 @@ struct AddMemberView: View {
                 .overlay {
                     HStack {
                         Button {
-                            withAnimation {
-                                viewModel.showAddPerson.toggle()
-                                viewModel.getSavedProfiles()
+                            DispatchQueue.main.async {
+                                self.viewModel.showAddPerson.toggle()
+                                self.viewModel.getSavedProfiles()
+                                self.viewModel.imageName = self.viewModel.showAddPerson ? "minus" : "plus"
                             }
                         } label: {
                             Circle()
@@ -34,13 +35,11 @@ struct AddMemberView: View {
                                        height: imageSize)
                                 .foregroundStyle(.clear)
                                 .overlay {
-                                    let imageName = viewModel.showAddPerson ? "minus" : "plus"
-                                    
-                                    Image(systemName: imageName)
+                                    Image(systemName: viewModel.imageName)
                                         .resizable()
                                         .scaledToFit()
                                         .foregroundStyle(.white)
-                                        .padding(12)
+                                        .frame(width: imageSize / 2)
                                 }
                         }
                         

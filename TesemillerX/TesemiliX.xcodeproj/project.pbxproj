@@ -14,6 +14,8 @@
 		47196EA82C00D171002189A2 /* CreatePersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47196EA72C00D171002189A2 /* CreatePersonView.swift */; };
 		47196EAA2C00D17A002189A2 /* CreatePersonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47196EA92C00D17A002189A2 /* CreatePersonViewModel.swift */; };
 		47196EAE2C00D2DA002189A2 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47196EAD2C00D2DA002189A2 /* ImagePicker.swift */; };
+		472B82712C09F7C4000347F6 /* BudgetDeteilsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472B82702C09F7C4000347F6 /* BudgetDeteilsView.swift */; };
+		472B82732C0A030B000347F6 /* BudgetDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472B82722C0A030B000347F6 /* BudgetDetailsViewModel.swift */; };
 		477736062BFE5A8100134EDE /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477736032BFE5A8000134EDE /* TabBar.swift */; };
 		477736072BFE5A8100134EDE /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477736042BFE5A8000134EDE /* TabBarView.swift */; };
 		477736082BFE5A8100134EDE /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477736052BFE5A8000134EDE /* TabBarViewModel.swift */; };
@@ -80,6 +82,8 @@
 		47196EA72C00D171002189A2 /* CreatePersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePersonView.swift; sourceTree = "<group>"; };
 		47196EA92C00D17A002189A2 /* CreatePersonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePersonViewModel.swift; sourceTree = "<group>"; };
 		47196EAD2C00D2DA002189A2 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		472B82702C09F7C4000347F6 /* BudgetDeteilsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetDeteilsView.swift; sourceTree = "<group>"; };
+		472B82722C0A030B000347F6 /* BudgetDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetDetailsViewModel.swift; sourceTree = "<group>"; };
 		477736032BFE5A8000134EDE /* TabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		477736042BFE5A8000134EDE /* TabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		477736052BFE5A8000134EDE /* TabBarViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
@@ -186,6 +190,15 @@
 			path = ImagePicker;
 			sourceTree = "<group>";
 		};
+		472B826F2C09F79E000347F6 /* BudgetDetails */ = {
+			isa = PBXGroup;
+			children = (
+				472B82702C09F7C4000347F6 /* BudgetDeteilsView.swift */,
+				472B82722C0A030B000347F6 /* BudgetDetailsViewModel.swift */,
+			);
+			path = BudgetDetails;
+			sourceTree = "<group>";
+		};
 		477735FE2BFE59D700134EDE /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +221,7 @@
 		477736092BFE702F00134EDE /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				472B826F2C09F79E000347F6 /* BudgetDetails */,
 				47196E9F2C00B317002189A2 /* AddMemberView */,
 				47196EA62C00D150002189A2 /* CreatePerson */,
 				477736192BFE743F00134EDE /* Views */,
@@ -619,6 +633,7 @@
 				47F7C99D2BFBA55700F082BD /* FileManagerService.swift in Sources */,
 				4777360B2BFE703D00134EDE /* HomeView.swift in Sources */,
 				47B418242BF77ABC00F449A7 /* ContentViewModel.swift in Sources */,
+				472B82712C09F7C4000347F6 /* BudgetDeteilsView.swift in Sources */,
 				47F7C9962BFBA3D700F082BD /* PrivacyPolicyViewModel.swift in Sources */,
 				47B417352BF73CAB00F449A7 /* AppDelegate.swift in Sources */,
 				470A28C02C033DE200CA7CC0 /* CreateBudgetViewModel.swift in Sources */,
@@ -631,6 +646,7 @@
 				47B4181D2BF76FFB00F449A7 /* Strings.generated.swift in Sources */,
 				47B418192BF76FE500F449A7 /* Images.generated.swift in Sources */,
 				477736182BFE71A800134EDE /* String+Additions.swift in Sources */,
+				472B82732C0A030B000347F6 /* BudgetDetailsViewModel.swift in Sources */,
 				47A84ABF2BFFAE93002071CC /* CreatBudgetView.swift in Sources */,
 				47F7C9642BFB289E00F082BD /* OnboardingViewTabView.swift in Sources */,
 				4782869D2C0642A1009445B4 /* BudgetView.swift in Sources */,

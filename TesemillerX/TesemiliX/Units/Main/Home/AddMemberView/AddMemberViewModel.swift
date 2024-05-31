@@ -15,6 +15,7 @@ extension AddMemberView {
         @Published var showAddPerson = false
         @Published var showCreatePerson = false
         @Published var searchText = ""
+        @Published var imageName = "plus"
     }
 }
 
@@ -54,6 +55,12 @@ extension AddMemberView.AddMemberViewModel {
     
     func deleteItem(at offsets: IndexSet) {
         DispatchQueue.main.async {
+            let items = offsets.map { self.savedProfiles[$0] }
+            items.forEach { item in
+                let path = FileManagerService.Keys.profileImage(id: item.id).path
+                FileManagerService().removeFile(forPath: path)
+            }
+            
             self.savedProfiles.remove(atOffsets: offsets)
             DefaultsService.saveProfile(items: self.savedProfiles)
             self.getSavedProfiles()

@@ -57,15 +57,13 @@ struct BudgetView: View {
                     amount: amount,
                     firstColor: self.firstColor,
                     secondColor: self.secondColor,
-                    thirdColor: self.thirdColor
-                ) { // On Details
-                    onDetails()
-                }
-                .padding(.horizontal, 40)
+                    thirdColor: self.thirdColor) { // On Details
+                        onDetails()
+                    }
+                    .padding(.horizontal, 40)
             }
             .background(.white)
-            .cornerRadius(50,
-                          corners: [.bottomLeft, .bottomRight])
+            .cornerRadius(50, corners: [.bottomLeft, .bottomRight])
             
             Spacer()
         }
