@@ -43,8 +43,11 @@ struct DepositProgressView: View {
 
 private extension DepositProgressView {
     func calculatePercent() {
-        percent = (myAmount / totalAmount) * 100.0
-        print("percent", percent)
+        if totalAmount > 0 && myAmount >= 0 {
+            percent = (myAmount / totalAmount) * 100.0
+        } else {
+            percent = 0.0
+        }
     }
     
     func colorFor(index: Int) -> Color {

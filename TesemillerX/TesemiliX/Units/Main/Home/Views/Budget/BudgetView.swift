@@ -9,13 +9,32 @@ import SwiftUI
 
 struct BudgetView: View {
     var model: CreateBudgetView.BudgetModel
+    var onDetails: () -> Void
     
     @State private var progress: Double = 0
     @State private var amount: Double = 0
     
+    @State private var firstColor = Colors.greenCustom.swiftUIColor.opacity(0.2)
+    @State private var secondColor = Colors.greenCustom.swiftUIColor.opacity(0.25)
+    @State private var thirdColor = Colors.greenCustom.swiftUIColor.opacity(0.3)
+    
     var body: some View {
         VStack(spacing: 0) {
-            AddMemberView(completedPercent: progress)
+            VStack(spacing: 10) {
+                HStack {
+                    Text(model.name)
+                        .foregroundStyle(.white)
+                        .font(Fonts.KulimPark.bold.swiftUIFont(size: 16))
+                    
+                    Spacer()
+                }
+                .padding(.horizontal)
+                
+                AddMemberView(
+                    completedPercent: progress,
+                    profiles: model.profiles
+                )
+            }
             
             VStack {
                 HStack {
@@ -35,8 +54,13 @@ struct BudgetView: View {
                 
                 CircledProgressView(
                     progress: progress,
-                    amount: amount
-                )
+                    amount: amount,
+                    firstColor: self.firstColor,
+                    secondColor: self.secondColor,
+                    thirdColor: self.thirdColor
+                ) { // On Details
+                    onDetails()
+                }
                 .padding(.horizontal, 40)
             }
             .background(.white)
@@ -56,8 +80,28 @@ struct BudgetView: View {
 
 private extension BudgetView {
     func calculateProgress() {
-        DispatchQueue.main.async {
-            self.progress = 40 // (model.completed / model.amount) * 100
+        self.progress = (model.completed / model.amount) * 100
+        
+        switch progress {
+        case 1...20:
+            firstColor = Colors.greenCustom.swiftUIColor
+            secondColor = Colors.greenCustom.swiftUIColor.opacity(0.25)
+            thirdColor = Colors.greenCustom.swiftUIColor.opacity(0.3)
+            
+        case 21...80:
+            firstColor = Colors.greenCustom.swiftUIColor
+            secondColor = Colors.greenCustom.swiftUIColor
+            thirdColor = Colors.greenCustom.swiftUIColor.opacity(0.25)
+            
+        case 81...:
+            firstColor = Colors.greenCustom.swiftUIColor
+            secondColor = Colors.greenCustom.swiftUIColor
+            thirdColor = Colors.greenCustom.swiftUIColor
+            
+        default:
+            firstColor = Colors.greenCustom.swiftUIColor.opacity(0.2)
+            secondColor = Colors.greenCustom.swiftUIColor.opacity(0.25)
+            thirdColor = Colors.greenCustom.swiftUIColor.opacity(0.3)
         }
     }
 }
@@ -74,8 +118,9 @@ private extension BudgetView {
             name: "Hous",
             date: .init(),
             description: "Some description",
-            amount: 10_00
-        ))
+            amount: 1000,
+            completed: 5000
+        )) {}
         .padding()
     }
 }

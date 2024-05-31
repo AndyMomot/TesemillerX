@@ -10,7 +10,8 @@ import SwiftUI
 struct AddMemberView: View {
     @StateObject private var viewModel = AddMemberViewModel()
     var completedPercent: Double?
-    var selectedProfiles: (([HomeView.HomeViewModel.Profile]) -> Void)?
+    var profiles = [HomeView.HomeViewModel.Profile]()
+    var selectedProfilesCallBack: (([HomeView.HomeViewModel.Profile]) -> Void)?
     
     var body: some View {
         VStack(spacing: .zero) {
@@ -118,7 +119,7 @@ struct AddMemberView: View {
                                     withAnimation {
                                         viewModel.addSelected(profile: profile)
                                     }
-                                    selectedProfiles?(viewModel.getSelectedProfiles())
+                                    selectedProfilesCallBack?(viewModel.getSelectedProfiles())
                                 }
                         }
                         .onDelete(perform: viewModel.deleteItem)
@@ -157,6 +158,9 @@ struct AddMemberView: View {
                                                 .bottomRight])
                 )
             }
+        }
+        .onAppear {
+            viewModel.selectedProfiles = profiles
         }
         .sheet(isPresented: $viewModel.showCreatePerson) {
             CreatePersonView() {

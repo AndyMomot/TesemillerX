@@ -12,6 +12,20 @@ extension HomeView {
         
         @Published var totalAmount: Double = 0
         @Published var myAmount: Double = 0
+        @Published var budgets: [CreateBudgetView.BudgetModel] = []
+        
+        @Published var showBudgetDetails = false
+        @Published var budgetToShow: CreateBudgetView.BudgetModel?
+        
+        func onAppear() {
+            getBudgets()
+        }
+        
+        func getBudgets() {
+            DispatchQueue.main.async {
+                self.budgets = DefaultsService.getBudgets()
+            }
+        }
     }
 }
 
