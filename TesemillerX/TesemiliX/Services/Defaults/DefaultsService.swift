@@ -64,7 +64,7 @@ extension DefaultsService {
         }
     }
     
-    static func saveProfile(items: [CreateBudgetView.BudgetModel]) {
+    static func saveBudget(items: [CreateBudgetView.BudgetModel]) {
         if let data = try? JSONEncoder().encode(items) {
             standard.set(data, forKey: Keys.budget.rawValue)
         }

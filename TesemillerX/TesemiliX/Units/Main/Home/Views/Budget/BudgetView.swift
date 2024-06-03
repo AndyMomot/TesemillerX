@@ -116,8 +116,7 @@ private extension BudgetView {
             name: "Hous",
             date: .init(),
             description: "Some description",
-            amount: 1000,
-            completed: 5000
+            amount: 1000
         )) {}
         .padding()
     }

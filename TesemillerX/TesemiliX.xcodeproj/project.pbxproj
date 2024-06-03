@@ -64,6 +64,8 @@
 		47B4181D2BF76FFB00F449A7 /* Strings.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B4181C2BF76FFB00F449A7 /* Strings.generated.swift */; };
 		47B418222BF771BA00F449A7 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B418212BF771BA00F449A7 /* LoaderView.swift */; };
 		47B418242BF77ABC00F449A7 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B418232BF77ABC00F449A7 /* ContentViewModel.swift */; };
+		47EF2A3F2C0DD39400CF5F1D /* TopUpBudgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EF2A3E2C0DD39400CF5F1D /* TopUpBudgetView.swift */; };
+		47EF2A412C0DD39C00CF5F1D /* TopUpBudgetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EF2A402C0DD39C00CF5F1D /* TopUpBudgetViewModel.swift */; };
 		47F7C9642BFB289E00F082BD /* OnboardingViewTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F7C9632BFB289E00F082BD /* OnboardingViewTabView.swift */; };
 		47F7C9662BFB28F300F082BD /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F7C9652BFB28F300F082BD /* OnboardingView.swift */; };
 		47F7C98B2BFB9D5A00F082BD /* PrivacyPolicyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F7C98A2BFB9D5A00F082BD /* PrivacyPolicyView.swift */; };
@@ -134,6 +136,8 @@
 		47B4181C2BF76FFB00F449A7 /* Strings.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.generated.swift; sourceTree = "<group>"; };
 		47B418212BF771BA00F449A7 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 		47B418232BF77ABC00F449A7 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		47EF2A3E2C0DD39400CF5F1D /* TopUpBudgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopUpBudgetView.swift; sourceTree = "<group>"; };
+		47EF2A402C0DD39C00CF5F1D /* TopUpBudgetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopUpBudgetViewModel.swift; sourceTree = "<group>"; };
 		47F7C9632BFB289E00F082BD /* OnboardingViewTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewTabView.swift; sourceTree = "<group>"; };
 		47F7C9652BFB28F300F082BD /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		47F7C98A2BFB9D5A00F082BD /* PrivacyPolicyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyView.swift; sourceTree = "<group>"; };
@@ -193,6 +197,7 @@
 		472B826F2C09F79E000347F6 /* BudgetDetails */ = {
 			isa = PBXGroup;
 			children = (
+				47EF2A3D2C0DD36E00CF5F1D /* TopUpBudget */,
 				472B82702C09F7C4000347F6 /* BudgetDeteilsView.swift */,
 				472B82722C0A030B000347F6 /* BudgetDetailsViewModel.swift */,
 			);
@@ -457,6 +462,15 @@
 			path = Loader;
 			sourceTree = "<group>";
 		};
+		47EF2A3D2C0DD36E00CF5F1D /* TopUpBudget */ = {
+			isa = PBXGroup;
+			children = (
+				47EF2A3E2C0DD39400CF5F1D /* TopUpBudgetView.swift */,
+				47EF2A402C0DD39C00CF5F1D /* TopUpBudgetViewModel.swift */,
+			);
+			path = TopUpBudget;
+			sourceTree = "<group>";
+		};
 		47F7C9622BFB273200F082BD /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -639,6 +653,7 @@
 				470A28C02C033DE200CA7CC0 /* CreateBudgetViewModel.swift in Sources */,
 				4782869F2C064F38009445B4 /* CircledProgressView.swift in Sources */,
 				477736162BFE71A800134EDE /* Comparable+Additions.swift in Sources */,
+				47EF2A3F2C0DD39400CF5F1D /* TopUpBudgetView.swift in Sources */,
 				4777361E2BFE746500134EDE /* DepositProgressView.swift in Sources */,
 				47A84AC82BFFC48D002071CC /* InputFieldResizable.swift in Sources */,
 				47F7C9662BFB28F300F082BD /* OnboardingView.swift in Sources */,
@@ -669,6 +684,7 @@
 				4777360D2BFE704400134EDE /* HomeViewModel.swift in Sources */,
 				477736072BFE5A8100134EDE /* TabBarView.swift in Sources */,
 				477736172BFE71A800134EDE /* View+Additions.swift in Sources */,
+				47EF2A412C0DD39C00CF5F1D /* TopUpBudgetViewModel.swift in Sources */,
 				477736062BFE5A8100134EDE /* TabBar.swift in Sources */,
 				47B418172BF76FDA00F449A7 /* Fonts.generated.swift in Sources */,
 				47F7C9942BFBA16C00F082BD /* SwiftUIViewWebView.swift in Sources */,
@@ -818,6 +834,7 @@
 				DEVELOPMENT_TEAM = AQV6DH83XK;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TesemiliX/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TesemiliX;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -850,6 +867,7 @@
 				DEVELOPMENT_TEAM = AQV6DH83XK;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TesemiliX/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TesemiliX;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;

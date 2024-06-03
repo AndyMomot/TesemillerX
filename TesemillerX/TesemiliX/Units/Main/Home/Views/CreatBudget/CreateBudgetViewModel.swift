@@ -60,7 +60,11 @@ extension CreateBudgetView {
         var date: Date?
         var description: String
         var amount: Double
-        var completed: Double = 0
+        var contributions: [Contribution] = []
+        
+        var completed: Double {
+            contributions.reduce(0.0) { $0 + $1.amount }
+        }
         
         var percent: Double { // 0...100
             if completed > 0 && amount >= 0 {
@@ -77,5 +81,14 @@ extension CreateBudgetView {
         static func == (lhs: CreateBudgetView.BudgetModel, rhs: CreateBudgetView.BudgetModel) -> Bool {
             lhs.id == rhs.id
         }
+    }
+}
+
+extension CreateBudgetView.BudgetModel {
+    struct Contribution: Identifiable, Codable {
+        private(set) var id = UUID().uuidString
+        private(set) var date = Date()
+        var profile: HomeView.HomeViewModel.Profile
+        var amount: Double
     }
 }
