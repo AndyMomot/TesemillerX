@@ -8,7 +8,7 @@
 import Foundation
 
 extension HomeView {
-    final class  HomeViewModel: ObservableObject {
+    final class HomeViewModel: ObservableObject {
         
         @Published var totalAmount: Double = 0
         @Published var myAmount: Double = 0
@@ -18,13 +18,15 @@ extension HomeView {
         @Published var budgetToShow: CreateBudgetView.BudgetModel?
         
         func onAppear() {
-            getBudgets()
-            showBudgetDetails = false
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
+                self?.getBudgets()
+                self?.showBudgetDetails = false
+            }
         }
         
         func getBudgets() {
-            DispatchQueue.main.async {
-                self.budgets = DefaultsService.getBudgets()
+            DispatchQueue.main.async { [weak self] in
+                self?.budgets = DefaultsService.getBudgets()
             }
         }
     }

@@ -104,6 +104,7 @@ struct TopUpBudgetView: View {
             }
             .padding()
             .onAppear {
+                viewModel.budgetId = self.budgetId
                 viewModel.getSavedProfiles()
             }
         }

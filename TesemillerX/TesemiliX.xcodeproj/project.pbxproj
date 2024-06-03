@@ -66,6 +66,8 @@
 		47B418242BF77ABC00F449A7 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B418232BF77ABC00F449A7 /* ContentViewModel.swift */; };
 		47EF2A3F2C0DD39400CF5F1D /* TopUpBudgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EF2A3E2C0DD39400CF5F1D /* TopUpBudgetView.swift */; };
 		47EF2A412C0DD39C00CF5F1D /* TopUpBudgetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EF2A402C0DD39C00CF5F1D /* TopUpBudgetViewModel.swift */; };
+		47EF2A442C0DFE5A00CF5F1D /* DonnaterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EF2A432C0DFE5A00CF5F1D /* DonnaterCell.swift */; };
+		47EF2A472C0E068600CF5F1D /* CustomProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EF2A462C0E068600CF5F1D /* CustomProgressView.swift */; };
 		47F7C9642BFB289E00F082BD /* OnboardingViewTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F7C9632BFB289E00F082BD /* OnboardingViewTabView.swift */; };
 		47F7C9662BFB28F300F082BD /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F7C9652BFB28F300F082BD /* OnboardingView.swift */; };
 		47F7C98B2BFB9D5A00F082BD /* PrivacyPolicyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F7C98A2BFB9D5A00F082BD /* PrivacyPolicyView.swift */; };
@@ -138,6 +140,8 @@
 		47B418232BF77ABC00F449A7 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		47EF2A3E2C0DD39400CF5F1D /* TopUpBudgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopUpBudgetView.swift; sourceTree = "<group>"; };
 		47EF2A402C0DD39C00CF5F1D /* TopUpBudgetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopUpBudgetViewModel.swift; sourceTree = "<group>"; };
+		47EF2A432C0DFE5A00CF5F1D /* DonnaterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonnaterCell.swift; sourceTree = "<group>"; };
+		47EF2A462C0E068600CF5F1D /* CustomProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressView.swift; sourceTree = "<group>"; };
 		47F7C9632BFB289E00F082BD /* OnboardingViewTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewTabView.swift; sourceTree = "<group>"; };
 		47F7C9652BFB28F300F082BD /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		47F7C98A2BFB9D5A00F082BD /* PrivacyPolicyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyView.swift; sourceTree = "<group>"; };
@@ -197,6 +201,8 @@
 		472B826F2C09F79E000347F6 /* BudgetDetails */ = {
 			isa = PBXGroup;
 			children = (
+				47EF2A452C0E066E00CF5F1D /* Views */,
+				47EF2A422C0DFE3000CF5F1D /* Cells */,
 				47EF2A3D2C0DD36E00CF5F1D /* TopUpBudget */,
 				472B82702C09F7C4000347F6 /* BudgetDeteilsView.swift */,
 				472B82722C0A030B000347F6 /* BudgetDetailsViewModel.swift */,
@@ -471,6 +477,22 @@
 			path = TopUpBudget;
 			sourceTree = "<group>";
 		};
+		47EF2A422C0DFE3000CF5F1D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				47EF2A432C0DFE5A00CF5F1D /* DonnaterCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		47EF2A452C0E066E00CF5F1D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				47EF2A462C0E068600CF5F1D /* CustomProgressView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		47F7C9622BFB273200F082BD /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -665,6 +687,7 @@
 				47A84ABF2BFFAE93002071CC /* CreatBudgetView.swift in Sources */,
 				47F7C9642BFB289E00F082BD /* OnboardingViewTabView.swift in Sources */,
 				4782869D2C0642A1009445B4 /* BudgetView.swift in Sources */,
+				47EF2A442C0DFE5A00CF5F1D /* DonnaterCell.swift in Sources */,
 				47B418222BF771BA00F449A7 /* LoaderView.swift in Sources */,
 				47B4174D2BF741F400F449A7 /* ContentView.swift in Sources */,
 				47B418122BF7656D00F449A7 /* PreloaderViewModel.swift in Sources */,
@@ -679,6 +702,7 @@
 				47B418102BF7653A00F449A7 /* PreloaderView.swift in Sources */,
 				47B4181B2BF76FF100F449A7 /* Colors.generated.swift in Sources */,
 				47196EA82C00D171002189A2 /* CreatePersonView.swift in Sources */,
+				47EF2A472C0E068600CF5F1D /* CustomProgressView.swift in Sources */,
 				47196EA32C00C7A0002189A2 /* AddMemberViewModel.swift in Sources */,
 				47A84AC52BFFBD67002071CC /* InputFieldView.swift in Sources */,
 				4777360D2BFE704400134EDE /* HomeViewModel.swift in Sources */,

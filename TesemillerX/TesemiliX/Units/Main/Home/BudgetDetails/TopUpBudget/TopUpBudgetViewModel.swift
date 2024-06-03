@@ -50,10 +50,9 @@ extension TopUpBudgetView {
                     $0.id == self.budgetId
                 }) {
                     items[index].contributions.append(model)
-                }
-                
-                DefaultsService.saveBudget(items: items)
-                completion()
+                    DefaultsService.saveBudget(items: items)
+                    completion()
+                } 
             }
         }
     }

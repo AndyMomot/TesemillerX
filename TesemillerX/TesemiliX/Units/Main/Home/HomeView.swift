@@ -25,7 +25,7 @@ struct HomeView: View {
                             .foregroundStyle(Colors.blackCustom.swiftUIColor)
                             .padding(.vertical, 6)
                             .padding(.horizontal, 12)
-                            .background()
+                            .background(Colors.grayCustom.swiftUIColor)
                             .cornerRadius(10, corners: .allCorners)
                         
                         Spacer()
@@ -35,7 +35,7 @@ struct HomeView: View {
                                 .foregroundStyle(Colors.blackCustom.swiftUIColor)
                                 .padding(.vertical, 6)
                                 .padding(.horizontal, 12)
-                                .background()
+                                .background(Colors.grayCustom.swiftUIColor)
                                 .cornerRadius(10, corners: .allCorners)
                         }
                     }
@@ -63,6 +63,9 @@ struct HomeView: View {
                             }
                         }
                     }
+                    .refreshable {
+                        viewModel.onAppear()
+                    }
                 }
             }
             .onAppear {
@@ -70,7 +73,9 @@ struct HomeView: View {
             }
             .navigationDestination(isPresented: $viewModel.showBudgetDetails) {
                 if let budget = viewModel.budgetToShow {
-                    BudgetDetailsView(budget: budget)
+                    BudgetDetailsView(budget: budget) {
+                        viewModel.onAppear()
+                    }
                 }
             }
         }

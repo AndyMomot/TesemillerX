@@ -9,6 +9,7 @@ import SwiftUI
 
 struct BudgetDetailsView: View {
     var budget: CreateBudgetView.BudgetModel
+    var onDismiss: () -> Void
     
     @Environment(\.dismiss) private var dismiss
     @StateObject private var viewModel = BudgetDetailsViewModel()
@@ -24,6 +25,7 @@ struct BudgetDetailsView: View {
                         HStack {
                             Button {
                                 dismiss.callAsFunction()
+                                onDismiss()
                             } label: {
                                 Circle()
                                     .frame(width: 45, height: 45)
@@ -42,7 +44,9 @@ struct BudgetDetailsView: View {
                             Spacer()
                             
                             Button {
-                                // Delete action
+                                viewModel.deleteBudget {
+                                    dismiss.callAsFunction()
+                                }
                             } label: {
                                 Rectangle()
                                     .foregroundStyle(.white)
@@ -73,7 +77,7 @@ struct BudgetDetailsView: View {
                             }
                             
                             HStack {
-                                Text(budget.description)
+                                Text(viewModel.budget.description)
                                     .foregroundStyle(.white)
                                     .font(Fonts.KulimPark.regular.swiftUIFont(size: 12))
                                 Spacer()
@@ -85,29 +89,16 @@ struct BudgetDetailsView: View {
                         
                         VStack(spacing: 10) {
                             HStack {
-                                Text(budget.percent.string(maximumFractionDigits: 0) + "%")
+                                Text(viewModel.budget.percent.string(maximumFractionDigits: 0) + "%")
                                     .foregroundStyle(.black)
                                     .font(Fonts.KulimPark.bold.swiftUIFont(size: 40))
                                 Spacer()
-                                Text(budget.name)
+                                Text(viewModel.budget.name)
                                     .foregroundStyle(.black)
                                     .font(Fonts.KulimPark.bold.swiftUIFont(size: 24))
                             }
-                            
-                            ZStack {
-                                RoundedRectangle(cornerRadius: 28)
-                                    .foregroundStyle(.white)
-                                    .frame(height: 56)
-                                
-                                HStack {
-                                    
-                                    RoundedRectangle(cornerRadius: 28)
-                                        .foregroundStyle(Colors.blackCustom.swiftUIColor)
-                                        .frame(height: 56)
-                                    
-                                    Spacer(minLength: viewModel.progressRightPadding)
-                                }
-                            }
+                    
+                            CustomProgressView(progress: viewModel.progress)
                         }
                         .padding(.horizontal, 30)
                         .padding(.bottom)
@@ -117,7 +108,7 @@ struct BudgetDetailsView: View {
                     
                     Button {
                         withAnimation {
-                            viewModel.budgetId = budget.id
+                            viewModel.budgetId = viewModel.budget.id
                             viewModel.showTopUp.toggle()
                         }
                     } label: {
@@ -143,7 +134,7 @@ struct BudgetDetailsView: View {
                     HStack(spacing: 8) {
                         ScrollView(.horizontal) {
                             HStack(spacing: 8) {
-                                ForEach(budget.profiles) { profile in
+                                ForEach(viewModel.budget.profiles) { profile in
                                     if let image = viewModel.getProfileImage(for: profile.id) {
                                         image
                                             .resizable()
@@ -153,6 +144,7 @@ struct BudgetDetailsView: View {
                                     }
                                 }
                             }
+                            .padding(.leading)
                         }
                         
                         Text("Uzupełnienie Do banku")
@@ -162,37 +154,27 @@ struct BudgetDetailsView: View {
                             .background(Colors.greenCustom.swiftUIColor)
                             .cornerRadius(20, corners: [.topLeft, .bottomLeft])
                     }
-                }
-            }
-            
-            ForEach(budget.contributions) { contribution in
-                HStack {
-                    if let image = viewModel.getProfileImage(for: contribution.profile.id) {
-                        image
-                            .resizable()
-                            .scaledToFill()
-                            .clipShape(Circle())
-                            .frame(width: 47, height: 47)
+                    
+                    ForEach(viewModel.budget.contributions.reversed()) { contribution in
+                        DonnaterCell(contribution: contribution) { idToDelete in
+                            viewModel.deleteContribution(with: idToDelete)
+                        }
+                        .padding(.horizontal)
                     }
-                    
-                    Spacer()
-                    
-                    Text("$" +  contribution.amount.string(maximumFractionDigits: 0))
-                        .foregroundStyle(.white)
-                        .font(Fonts.KulimPark.regular.swiftUIFont(size: 45))
                 }
             }
+            .padding(.bottom, UIScreen.main.bounds.height * 0.1)
         }
         .navigationBarBackButtonHidden()
         .onAppear {
+            viewModel.budget = self.budget
             withAnimation {
-                let width = UIScreen.main.bounds.width
-                viewModel.calculateProgressWith(screen: width, budget: budget)
+                viewModel.calculateProgressWith()
             }
         }
         .sheet(isPresented: $viewModel.showTopUp) {
             TopUpBudgetView(budgetId: viewModel.budgetId) { // on save
-                
+                viewModel.updateBudget()
             }
         }
     }
@@ -209,5 +191,5 @@ struct BudgetDetailsView: View {
             description: "Rodzina zbiera pieniądze na edukację, aby zapewnić swoim dzieciom wysokiej jakości edukację i rozwój. Rozumieją, że edukacja jest kluczem do przyszłego sukcesu i szczęśliwego życia. Zbierając fundusze na edukację, rodzina dąży do zapewnienia dzieciom dostępu do najlepszych możliwości nauki, rozwijając ich potencjał i pomagając im zbudować udaną karierę.",
             amount: 15_000
         )
-    )
+    ) {}
 }
