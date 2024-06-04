@@ -73,6 +73,12 @@ struct BudgetView: View {
                 amount = model.amount
             }
         }
+        .onChange(of: model) { value in
+            withAnimation {
+                calculateProgress()
+                amount = model.amount
+            }
+        }
     }
 }
 

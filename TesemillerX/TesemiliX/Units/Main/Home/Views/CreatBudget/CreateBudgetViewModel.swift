@@ -36,7 +36,8 @@ extension CreateBudgetView {
         func createBudget(completion: @escaping () -> Void) {
             guard isValidFields else { return }
             
-            DispatchQueue.main.async {
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else { return }
                 let model = BudgetModel(
                     profiles: self.profiles,
                     name: self.name,

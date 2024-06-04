@@ -15,7 +15,8 @@ extension ContentView {
         
         func getFlow() {
             viewState = DefaultsService.flow
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [weak self] in
+                guard let self = self else { return }
                 self.showPreloader = false
             }
         }

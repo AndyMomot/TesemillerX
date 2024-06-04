@@ -23,7 +23,8 @@ extension CreatePersonView {
         }
         
         func savePerson(completion: @escaping () -> Void) {
-            DispatchQueue.main.async {
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else { return }
                 guard self.isValidFields else { return }
                 
                 let profile = HomeView.HomeViewModel.Profile(

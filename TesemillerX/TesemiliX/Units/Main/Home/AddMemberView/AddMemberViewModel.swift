@@ -32,7 +32,8 @@ extension AddMemberView.AddMemberViewModel {
     }
     
     func getSavedProfiles() {
-        DispatchQueue.main.async {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
             self.savedProfiles = DefaultsService.getProfiles()
         }
     }
@@ -54,7 +55,8 @@ extension AddMemberView.AddMemberViewModel {
     }
     
     func deleteItem(at offsets: IndexSet) {
-        DispatchQueue.main.async {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
             let items = offsets.map { self.savedProfiles[$0] }
             items.forEach { item in
                 let path = FileManagerService.Keys.profileImage(id: item.id).path

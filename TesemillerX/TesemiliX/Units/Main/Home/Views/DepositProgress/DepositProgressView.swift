@@ -12,6 +12,12 @@ struct DepositProgressView: View {
     var myAmount: Double
     
     @State private var percent = 0.0
+    @State var colors: [Color] = [
+        Colors.grayCustom.swiftUIColor,
+        Colors.grayCustom.swiftUIColor,
+        Colors.grayCustom.swiftUIColor,
+        Colors.grayCustom.swiftUIColor
+    ]
     
     var body: some View {
         VStack(spacing: 20) {
@@ -30,13 +36,15 @@ struct DepositProgressView: View {
             HStack(spacing: 8) {
                 ForEach(0..<4) { index in
                     RoundedRectangle(cornerRadius: 4)
-                        .foregroundStyle(colorFor(index: index))
+                        .foregroundStyle(colors[index])
                         .frame(height: 8)
                 }
             }
         }
         .onAppear {
-            calculatePercent()
+            DispatchQueue.main.async {
+                self.calculatePercent()
+            }
         }
     }
 }
@@ -48,28 +56,49 @@ private extension DepositProgressView {
         } else {
             percent = 0.0
         }
+        
+        updateColors()
     }
     
-    func colorFor(index: Int) -> Color {
-        switch index {
-        case 0:
-            return colorFor(percent: 25)
-        case 1:
-            return colorFor(percent: 50)
-        case 2:
-            return colorFor(percent: 75)
-        case 3:
-            return colorFor(percent: 100)
+    func updateColors() {
+        switch percent {
+        case 1...25:
+            colors = [
+                Colors.greenCustom.swiftUIColor,
+                Colors.grayCustom.swiftUIColor,
+                Colors.grayCustom.swiftUIColor,
+                Colors.grayCustom.swiftUIColor
+            ]
+            
+        case 26...50:
+            colors = [
+                Colors.greenCustom.swiftUIColor,
+                Colors.greenCustom.swiftUIColor,
+                Colors.grayCustom.swiftUIColor,
+                Colors.grayCustom.swiftUIColor
+            ]
+            
+        case 51...75:
+            colors = [
+                Colors.greenCustom.swiftUIColor,
+                Colors.greenCustom.swiftUIColor,
+                Colors.greenCustom.swiftUIColor,
+                Colors.grayCustom.swiftUIColor
+            ]
+        case 76...:
+            colors = [
+                Colors.greenCustom.swiftUIColor,
+                Colors.greenCustom.swiftUIColor,
+                Colors.greenCustom.swiftUIColor,
+                Colors.greenCustom.swiftUIColor
+            ]
         default:
-            return Colors.grayCustom.swiftUIColor
-        }
-    }
-    
-    func colorFor(percent: Double) -> Color {
-        if self.percent >= percent {
-            return Colors.greenCustom.swiftUIColor
-        } else {
-            return Colors.grayCustom.swiftUIColor
+            colors = [
+                Colors.grayCustom.swiftUIColor,
+                Colors.grayCustom.swiftUIColor,
+                Colors.grayCustom.swiftUIColor,
+                Colors.grayCustom.swiftUIColor
+            ]
         }
     }
 }

@@ -30,7 +30,9 @@ struct HomeView: View {
                         
                         Spacer()
                         
-                        NavigationLink(destination: CreateBudgetView()) {
+                        Button {
+                            viewModel.showCreateBudget.toggle()
+                        } label: {
                             Text("Tworzenie budżetu")
                                 .foregroundStyle(Colors.blackCustom.swiftUIColor)
                                 .padding(.vertical, 6)
@@ -54,7 +56,6 @@ struct HomeView: View {
                             VStack {
                                 ForEach(viewModel.budgets) { budget in
                                     BudgetView(model: budget) { // on derails
-                            
                                         viewModel.budgetToShow = budget
                                         self.viewModel.showBudgetDetails.toggle()
                                         
@@ -70,6 +71,9 @@ struct HomeView: View {
             }
             .onAppear {
                 viewModel.onAppear()
+            }
+            .navigationDestination(isPresented: $viewModel.showCreateBudget) {
+                CreateBudgetView()
             }
             .navigationDestination(isPresented: $viewModel.showBudgetDetails) {
                 if let budget = viewModel.budgetToShow {

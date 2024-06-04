@@ -17,7 +17,8 @@ extension TopUpBudgetView {
         @Published var amount: String = ""
         
         func getSavedProfiles() {
-            DispatchQueue.main.async {
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else { return }
                 self.savedProfiles = DefaultsService.getProfiles()
             }
         }
@@ -34,7 +35,8 @@ extension TopUpBudgetView {
         }
         
         func topUpBudget(completion: @escaping () -> Void) {
-            DispatchQueue.main.async {
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else { return }
                 guard let profile = self.selectedProfile,
                         let amount = Double(self.amount)
                 else { return }
