@@ -13,7 +13,7 @@ struct TabBar: View {
     var body: some View {
         GeometryReader { geometry in
             TabView(selection: $viewModel.selection) {
-                Text("profile")
+                ProfileView()
                     .tag(TabBarSelectionView.profile.rawValue)
                     .environmentObject(viewModel)
                 

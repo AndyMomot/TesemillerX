@@ -43,8 +43,9 @@ private extension HomeView.HomeViewModel {
 
 extension HomeView.HomeViewModel {
     struct Profile: Identifiable, Codable {
-        private(set) var id = UUID().uuidString
+        var id = UUID().uuidString
         var firstName: String
         var lastName: String
+        var isUser = false
     }
 }

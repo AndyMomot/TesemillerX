@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CreatePersonView: View {
+    var profile: HomeView.HomeViewModel.Profile?
     var onDismiss: () -> Void
     
     @StateObject private var viewModel = CreatePersonViewModel()
@@ -20,7 +21,7 @@ struct CreatePersonView: View {
                     Image(uiImage: viewModel.selectedImage)
                         .resizable()
                         .scaledToFill()
-                        .frame(width: 200, height: 200)
+                        .frame(width: 150, height: 150)
                         .clipShape(Circle())
                     
                     Button {
@@ -37,12 +38,12 @@ struct CreatePersonView: View {
                 VStack {
                     InputFieldView(placeholder: "Imię",
                                    rightView: EmptyView(),
-                                   text: $viewModel.firstName)
+                                   text: $viewModel.profile.firstName)
                     .frame(height: 48)
                     
                     InputFieldView(placeholder: "Nazwisko",
                                    rightView: EmptyView(),
-                                   text: $viewModel.lastName)
+                                   text: $viewModel.profile.lastName)
                     .frame(height: 48)
                 }
             }
@@ -71,6 +72,9 @@ struct CreatePersonView: View {
             }
         }
         .padding()
+        .onAppear {
+            viewModel.setProfile(profile)
+        }
         .sheet(isPresented: $viewModel.showImagePicker) {
             ImagePicker(selectedImage: $viewModel.selectedImage)
         }
