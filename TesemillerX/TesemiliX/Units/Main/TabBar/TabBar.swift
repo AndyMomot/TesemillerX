@@ -30,7 +30,7 @@ struct TabBar: View {
                     .tag(TabBarSelectionView.settings.rawValue)
                     .environmentObject(viewModel)
             }
-            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+//            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .automatic))
             .edgesIgnoringSafeArea(.bottom)
             .overlay {
                 VStack {

@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ProfileView: View {
-    
     @StateObject private var viewModel = ProfileViewModel()
     
     var body: some View {
@@ -110,15 +109,15 @@ struct ProfileView: View {
             .navigationDestination(isPresented: $viewModel.showAdviceDetails) {
                 AdviceDetailsView(item: viewModel.adviceToShow)
             }
-            .onAppear {
-                viewModel.showAdviceDetails = false
-                viewModel.getProfile()
-                viewModel.getAmount()
-            }
             .sheet(isPresented: $viewModel.showCreatePerson) {
                 CreatePersonView(profile: viewModel.profile) {
                     viewModel.getProfile()
                 }
+            }
+            .onAppear {
+                viewModel.showAdviceDetails = false
+                viewModel.getProfile()
+                viewModel.getAmount()
             }
         }
     }

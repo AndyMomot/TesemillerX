@@ -37,7 +37,23 @@ extension HomeView {
 private extension HomeView.HomeViewModel {
     func calculateAmount() {
         totalAmount = budgets.reduce(0.0) { $0 + $1.amount }
-        myAmount = budgets.reduce(0.0) { $0 + $1.completed }
+        
+        let budgets = DefaultsService.getBudgets().filter {
+            $0.contributions.contains(where: { $0.profile.isUser })
+        }
+        
+        var amount: Double {
+            var amount: Double = .zero
+            
+            budgets.forEach { budget in
+                let sum = budget.contributions.filter { $0.profile.isUser }.reduce(0.0) { $0 + $1.amount }
+                amount += sum
+            }
+            
+            return amount
+        }
+        
+        myAmount = amount
     }
 }
 

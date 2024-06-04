@@ -130,7 +130,18 @@ extension ProfileView {
                 $0.contributions.contains(where: { $0.profile.isUser })
             }
             
-            amount = budgets.reduce(0.0) { $0 + $1.amount }
+            var amount: Double {
+                var amount: Double = .zero
+                
+                budgets.forEach { budget in
+                    let sum = budget.contributions.filter { $0.profile.isUser }.reduce(0.0) { $0 + $1.amount }
+                    amount += sum
+                }
+                
+                return amount
+            }
+            
+            self.amount = amount
         }
     }
 }
