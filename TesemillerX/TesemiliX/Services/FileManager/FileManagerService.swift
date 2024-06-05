@@ -52,6 +52,20 @@ struct FileManagerService {
             print("Error removing file: \(path)")
         }
     }
+    
+    func removeAllFiles() {
+        let fileManager = FileManager.default
+        
+        do {
+            let fileURLs = try fileManager.contentsOfDirectory(at: documentsDirectory, includingPropertiesForKeys: nil)
+            for fileURL in fileURLs {
+                try fileManager.removeItem(at: fileURL)
+            }
+            print("All files removed successfully from \(documentsDirectory.path)")
+        } catch {
+            print("Error while enumerating files in \(documentsDirectory.path): \(error.localizedDescription)")
+        }
+    }
 }
 
 extension FileManagerService {

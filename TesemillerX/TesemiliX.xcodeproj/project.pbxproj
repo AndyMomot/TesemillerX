@@ -12,6 +12,9 @@
 		4705948D2C107191002F8B6B /* AddNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4705948C2C107191002F8B6B /* AddNoteView.swift */; };
 		4705948F2C107198002F8B6B /* AddNoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4705948E2C107198002F8B6B /* AddNoteViewModel.swift */; };
 		470594922C107552002F8B6B /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470594912C107552002F8B6B /* NoteCell.swift */; };
+		470594962C109FB5002F8B6B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470594952C109FB5002F8B6B /* SettingsView.swift */; };
+		470594982C109FC7002F8B6B /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470594972C109FC7002F8B6B /* SettingsViewModel.swift */; };
+		4705949B2C10A335002F8B6B /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4705949A2C10A335002F8B6B /* SettingCell.swift */; };
 		470A28C02C033DE200CA7CC0 /* CreateBudgetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470A28BF2C033DE200CA7CC0 /* CreateBudgetViewModel.swift */; };
 		47196EA12C00B331002189A2 /* AddMemberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47196EA02C00B331002189A2 /* AddMemberView.swift */; };
 		47196EA32C00C7A0002189A2 /* AddMemberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47196EA22C00C7A0002189A2 /* AddMemberViewModel.swift */; };
@@ -94,6 +97,9 @@
 		4705948C2C107191002F8B6B /* AddNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteView.swift; sourceTree = "<group>"; };
 		4705948E2C107198002F8B6B /* AddNoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteViewModel.swift; sourceTree = "<group>"; };
 		470594912C107552002F8B6B /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
+		470594952C109FB5002F8B6B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		470594972C109FC7002F8B6B /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		4705949A2C10A335002F8B6B /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
 		470A28BF2C033DE200CA7CC0 /* CreateBudgetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateBudgetViewModel.swift; sourceTree = "<group>"; };
 		47196EA02C00B331002189A2 /* AddMemberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemberView.swift; sourceTree = "<group>"; };
 		47196EA22C00C7A0002189A2 /* AddMemberViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemberViewModel.swift; sourceTree = "<group>"; };
@@ -210,6 +216,32 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		470594932C109E86002F8B6B /* TabBarView */ = {
+			isa = PBXGroup;
+			children = (
+				477736042BFE5A8000134EDE /* TabBarView.swift */,
+			);
+			path = TabBarView;
+			sourceTree = "<group>";
+		};
+		470594942C109FA5002F8B6B /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				470594992C10A329002F8B6B /* Cells */,
+				470594952C109FB5002F8B6B /* SettingsView.swift */,
+				470594972C109FC7002F8B6B /* SettingsViewModel.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		470594992C10A329002F8B6B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				4705949A2C10A335002F8B6B /* SettingCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		47196E9F2C00B317002189A2 /* AddMemberView */ = {
 			isa = PBXGroup;
 			children = (
@@ -264,6 +296,7 @@
 				47EF2A482C0F09B900CF5F1D /* Profile */,
 				477736092BFE702F00134EDE /* Home */,
 				470594852C1049A2002F8B6B /* Notes */,
+				470594942C109FA5002F8B6B /* Settings */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -271,8 +304,8 @@
 		477736022BFE5A8000134EDE /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				470594932C109E86002F8B6B /* TabBarView */,
 				477736032BFE5A8000134EDE /* TabBar.swift */,
-				477736042BFE5A8000134EDE /* TabBarView.swift */,
 				477736052BFE5A8000134EDE /* TabBarViewModel.swift */,
 			);
 			path = TabBar;
@@ -766,6 +799,7 @@
 				47F7C9642BFB289E00F082BD /* OnboardingViewTabView.swift in Sources */,
 				470594892C1049BB002F8B6B /* NotificationsViewModel.swift in Sources */,
 				470594922C107552002F8B6B /* NoteCell.swift in Sources */,
+				470594962C109FB5002F8B6B /* SettingsView.swift in Sources */,
 				4782869D2C0642A1009445B4 /* BudgetView.swift in Sources */,
 				47EF2A442C0DFE5A00CF5F1D /* DonnaterCell.swift in Sources */,
 				47B418222BF771BA00F449A7 /* LoaderView.swift in Sources */,
@@ -786,9 +820,11 @@
 				47B4181B2BF76FF100F449A7 /* Colors.generated.swift in Sources */,
 				47EF2A4A2C0F09CA00CF5F1D /* ProfileView.swift in Sources */,
 				47196EA82C00D171002189A2 /* CreatePersonView.swift in Sources */,
+				470594982C109FC7002F8B6B /* SettingsViewModel.swift in Sources */,
 				47EF2A472C0E068600CF5F1D /* CustomProgressView.swift in Sources */,
 				47196EA32C00C7A0002189A2 /* AddMemberViewModel.swift in Sources */,
 				47A84AC52BFFBD67002071CC /* InputFieldView.swift in Sources */,
+				4705949B2C10A335002F8B6B /* SettingCell.swift in Sources */,
 				4777360D2BFE704400134EDE /* HomeViewModel.swift in Sources */,
 				477736072BFE5A8100134EDE /* TabBarView.swift in Sources */,
 				477736172BFE71A800134EDE /* View+Additions.swift in Sources */,

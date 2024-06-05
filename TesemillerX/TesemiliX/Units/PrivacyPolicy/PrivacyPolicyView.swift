@@ -76,7 +76,7 @@ struct PrivacyPolicyView: View {
 
                 CheckBoxView(text: "Zgadzam sie z ",
                              highlightedText: "polityka prywatnosci",
-                             url: viewModel.url) { isAgreed in
+                             url: viewModel.privacyURL) { isAgreed in
                     viewModel.isAgreed = isAgreed
                 }
                 

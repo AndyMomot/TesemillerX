@@ -10,8 +10,8 @@ import SwiftUI
 struct DepositProgressView: View {
     var totalAmount: Double
     var myAmount: Double
+    var percent = 0.0
     
-    @State private var percent = 0.0
     @State var colors: [Color] = [
         Colors.grayCustom.swiftUIColor,
         Colors.grayCustom.swiftUIColor,
@@ -43,22 +43,23 @@ struct DepositProgressView: View {
         }
         .onAppear {
             DispatchQueue.main.async {
-                self.calculatePercent()
+//                self.calculatePercent()
+                self.updateColors()
             }
         }
     }
 }
 
 private extension DepositProgressView {
-    func calculatePercent() {
-        if totalAmount > 0 && myAmount >= 0 {
-            percent = (myAmount / totalAmount) * 100.0
-        } else {
-            percent = 0.0
-        }
-        
-        updateColors()
-    }
+//    func calculatePercent() {
+//        if totalAmount > 0 && myAmount >= 0 {
+//            percent = (myAmount / totalAmount) * 100.0
+//        } else {
+//            percent = 0.0
+//        }
+//        
+//        updateColors()
+//    }
     
     func updateColors() {
         switch percent {

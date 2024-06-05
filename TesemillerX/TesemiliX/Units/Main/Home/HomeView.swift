@@ -47,7 +47,9 @@ struct HomeView: View {
                         VStack {
                             DepositProgressView(
                                 totalAmount: viewModel.totalAmount,
-                                myAmount: viewModel.myAmount)
+                                myAmount: viewModel.myAmount,
+                                percent: viewModel.calculatePercent()
+                            )
                             
                             .padding(.horizontal)
                             

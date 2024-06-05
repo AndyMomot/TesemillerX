@@ -61,8 +61,8 @@ struct AdviceDetailsView: View {
                         .font(Fonts.KulimPark.light.swiftUIFont(size: 14))
                 }
                 .padding(.horizontal, 30)
-                .padding(.bottom, UIScreen.main.bounds.height * 0.1)
             }
+            .padding(.bottom, UIScreen.main.bounds.height * 0.01)
         }
         .navigationBarBackButtonHidden()
     }

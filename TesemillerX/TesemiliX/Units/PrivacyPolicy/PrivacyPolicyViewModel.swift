@@ -9,7 +9,7 @@ import Foundation
 
 extension PrivacyPolicyView {
     final class PrivacyPolicyViewModel: ObservableObject {
-        let url = URL(string: "https://www.google.com")
+        let privacyURL = URL(string: "https://tesemilix.info/")
         @Published var isAgreed = false
     }
 }

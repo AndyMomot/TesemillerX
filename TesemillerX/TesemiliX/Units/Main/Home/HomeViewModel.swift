@@ -12,6 +12,7 @@ extension HomeView {
         
         @Published var totalAmount: Double = 0
         @Published var myAmount: Double = 0
+        
         @Published var budgets: [CreateBudgetView.BudgetModel] = []
         
         @Published var showCreateBudget = false
@@ -19,17 +20,22 @@ extension HomeView {
         @Published var budgetToShow: CreateBudgetView.BudgetModel?
         
         func onAppear() {
-            DispatchQueue.main.async { [weak self] in
-                self?.getBudgets()
-                self?.showCreateBudget = false
-                self?.showBudgetDetails = false
-                self?.calculateAmount()
-            }
+            getBudgets()
+            showCreateBudget = false
+            showBudgetDetails = false
+            calculateAmount()
         }
         
         func getBudgets() {
-            budgets = []
             budgets = DefaultsService.getBudgets()
+        }
+        
+        func calculatePercent() -> Double {
+            if totalAmount > 0 && myAmount >= 0 {
+                return (myAmount / totalAmount) * 100.0
+            } else {
+                return 0.0
+            }
         }
     }
 }

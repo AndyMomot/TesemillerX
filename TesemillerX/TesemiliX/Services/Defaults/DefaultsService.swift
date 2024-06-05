@@ -102,6 +102,15 @@ extension DefaultsService {
     }
 }
 
+extension DefaultsService {
+    static func removeAll() {
+        if let bundleIdentifier = Bundle.main.bundleIdentifier {
+            standard.removePersistentDomain(forName: bundleIdentifier)
+            FileManagerService().removeAllFiles()
+        }
+    }
+}
+
 // MARK: - Keys
 extension DefaultsService {
     enum Keys: String {

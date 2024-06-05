@@ -29,8 +29,8 @@ struct ProfileView: View {
                             Text(viewModel.profile.lastName)
                         }
                         .foregroundStyle(Colors.blackCustom.swiftUIColor)
-                        .font(Fonts.KulimPark.bold.swiftUIFont(size: 20))
-                        .minimumScaleFactor(0.8)
+                        .font(Fonts.KulimPark.bold.swiftUIFont(size: 18))
+                        .minimumScaleFactor(0.5)
                         
                         Divider()
                             .frame(height: 59)
@@ -42,7 +42,8 @@ struct ProfileView: View {
                             
                             Text("$" + viewModel.amount.string(maximumFractionDigits: 0))
                                 .foregroundStyle(Colors.greenCustom.swiftUIColor)
-                                .font(Fonts.KulimPark.bold.swiftUIFont(size: 27))
+                                .font(Fonts.KulimPark.bold.swiftUIFont(size: 20))
+                                .minimumScaleFactor(0.5)
                         }
                         
                         Spacer()
