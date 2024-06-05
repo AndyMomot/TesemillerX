@@ -103,8 +103,13 @@ struct ProfileView: View {
                                       .padding(.horizontal)
                         }
                     }
+                    .refreshable {
+                        viewModel.showAdviceDetails = false
+                        viewModel.getProfile()
+                        viewModel.getAmount()
+                    }
                 }
-                
+                .padding(.bottom, UIScreen.main.bounds.height * 0.01)
             }
             .navigationDestination(isPresented: $viewModel.showAdviceDetails) {
                 AdviceDetailsView(item: viewModel.adviceToShow)

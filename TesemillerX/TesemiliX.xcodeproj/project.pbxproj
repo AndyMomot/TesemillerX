@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		470594872C1049B1002F8B6B /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470594862C1049B1002F8B6B /* NotesView.swift */; };
+		470594892C1049BB002F8B6B /* NotificationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470594882C1049BB002F8B6B /* NotificationsViewModel.swift */; };
+		4705948D2C107191002F8B6B /* AddNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4705948C2C107191002F8B6B /* AddNoteView.swift */; };
+		4705948F2C107198002F8B6B /* AddNoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4705948E2C107198002F8B6B /* AddNoteViewModel.swift */; };
+		470594922C107552002F8B6B /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470594912C107552002F8B6B /* NoteCell.swift */; };
 		470A28C02C033DE200CA7CC0 /* CreateBudgetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470A28BF2C033DE200CA7CC0 /* CreateBudgetViewModel.swift */; };
 		47196EA12C00B331002189A2 /* AddMemberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47196EA02C00B331002189A2 /* AddMemberView.swift */; };
 		47196EA32C00C7A0002189A2 /* AddMemberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47196EA22C00C7A0002189A2 /* AddMemberViewModel.swift */; };
@@ -83,6 +88,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		470594862C1049B1002F8B6B /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
+		470594882C1049BB002F8B6B /* NotificationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewModel.swift; sourceTree = "<group>"; };
+		4705948A2C104CA3002F8B6B /* TesemiliX.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TesemiliX.entitlements; sourceTree = "<group>"; };
+		4705948C2C107191002F8B6B /* AddNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteView.swift; sourceTree = "<group>"; };
+		4705948E2C107198002F8B6B /* AddNoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteViewModel.swift; sourceTree = "<group>"; };
+		470594912C107552002F8B6B /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
 		470A28BF2C033DE200CA7CC0 /* CreateBudgetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateBudgetViewModel.swift; sourceTree = "<group>"; };
 		47196EA02C00B331002189A2 /* AddMemberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemberView.swift; sourceTree = "<group>"; };
 		47196EA22C00C7A0002189A2 /* AddMemberViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemberViewModel.swift; sourceTree = "<group>"; };
@@ -171,6 +182,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		470594852C1049A2002F8B6B /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				470594902C107545002F8B6B /* Cells */,
+				4705948B2C107182002F8B6B /* AddNote */,
+				470594862C1049B1002F8B6B /* NotesView.swift */,
+				470594882C1049BB002F8B6B /* NotificationsViewModel.swift */,
+			);
+			path = Notes;
+			sourceTree = "<group>";
+		};
+		4705948B2C107182002F8B6B /* AddNote */ = {
+			isa = PBXGroup;
+			children = (
+				4705948C2C107191002F8B6B /* AddNoteView.swift */,
+				4705948E2C107198002F8B6B /* AddNoteViewModel.swift */,
+			);
+			path = AddNote;
+			sourceTree = "<group>";
+		};
+		470594902C107545002F8B6B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				470594912C107552002F8B6B /* NoteCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		47196E9F2C00B317002189A2 /* AddMemberView */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +263,7 @@
 				477736022BFE5A8000134EDE /* TabBar */,
 				47EF2A482C0F09B900CF5F1D /* Profile */,
 				477736092BFE702F00134EDE /* Home */,
+				470594852C1049A2002F8B6B /* Notes */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -343,6 +383,7 @@
 		47B417332BF73CAB00F449A7 /* TesemiliX */ = {
 			isa = PBXGroup;
 			children = (
+				4705948A2C104CA3002F8B6B /* TesemiliX.entitlements */,
 				47196EAB2C00D294002189A2 /* Helpers */,
 				4777360E2BFE71A800134EDE /* Extensions */,
 				47F7C9972BFBA55700F082BD /* Services */,
@@ -723,9 +764,12 @@
 				472B82732C0A030B000347F6 /* BudgetDetailsViewModel.swift in Sources */,
 				47A84ABF2BFFAE93002071CC /* CreatBudgetView.swift in Sources */,
 				47F7C9642BFB289E00F082BD /* OnboardingViewTabView.swift in Sources */,
+				470594892C1049BB002F8B6B /* NotificationsViewModel.swift in Sources */,
+				470594922C107552002F8B6B /* NoteCell.swift in Sources */,
 				4782869D2C0642A1009445B4 /* BudgetView.swift in Sources */,
 				47EF2A442C0DFE5A00CF5F1D /* DonnaterCell.swift in Sources */,
 				47B418222BF771BA00F449A7 /* LoaderView.swift in Sources */,
+				4705948D2C107191002F8B6B /* AddNoteView.swift in Sources */,
 				47B4174D2BF741F400F449A7 /* ContentView.swift in Sources */,
 				47B418122BF7656D00F449A7 /* PreloaderViewModel.swift in Sources */,
 				47F7C98B2BFB9D5A00F082BD /* PrivacyPolicyView.swift in Sources */,
@@ -752,6 +796,8 @@
 				477736062BFE5A8100134EDE /* TabBar.swift in Sources */,
 				47B418172BF76FDA00F449A7 /* Fonts.generated.swift in Sources */,
 				47F7C9942BFBA16C00F082BD /* SwiftUIViewWebView.swift in Sources */,
+				470594872C1049B1002F8B6B /* NotesView.swift in Sources */,
+				4705948F2C107198002F8B6B /* AddNoteViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -893,6 +939,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TesemiliX/TesemiliX.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = AQV6DH83XK;
@@ -926,6 +973,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TesemiliX/TesemiliX.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = AQV6DH83XK;

@@ -18,7 +18,7 @@ extension TabBar {
     enum TabBarSelectionView: Int {
         case profile = 0
         case home = 1
-        case notifications = 2
+        case notes = 2
         case settings = 3
     }
     

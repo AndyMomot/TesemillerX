@@ -71,6 +71,36 @@ extension DefaultsService {
     }
 }
 
+extension DefaultsService {
+    static func addNote(_ note: NotesView.NotesViewModel.Note) {
+        var notes = getNotes()
+        notes.append(note)
+        setNotes(notes)
+    }
+    
+    static func setNotes(_ notes: [NotesView.NotesViewModel.Note]) {
+        let notes = notes.sorted(by: { $0.date > $1.date })
+        if let data = try? JSONEncoder().encode(notes) {
+            standard.setValue(data, forKey: Keys.note.rawValue)
+        }
+    }
+    
+    static func deleteNote(_ note: NotesView.NotesViewModel.Note) {
+        var notes = getNotes()
+        if let index = notes.firstIndex(where: { $0.id == note.id }) {
+            notes.remove(at: index)
+            setNotes(notes)
+        }
+    }
+    
+    static func getNotes() -> [NotesView.NotesViewModel.Note] {
+        if let data = standard.object(forKey: Keys.note.rawValue) as? Data {
+            let items = try? JSONDecoder().decode([NotesView.NotesViewModel.Note].self, from: data)
+            return items ?? []
+        }
+        return []
+    }
+}
 
 // MARK: - Keys
 extension DefaultsService {
@@ -78,5 +108,6 @@ extension DefaultsService {
         case flow
         case profiles
         case budget
+        case note
     }
 }

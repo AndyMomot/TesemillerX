@@ -22,8 +22,8 @@ struct TabBar: View {
                     .tag(TabBarSelectionView.home.rawValue)
                     .environmentObject(viewModel)
                 
-                Text("notifications")
-                    .tag(TabBarSelectionView.notifications.rawValue)
+                NotesView()
+                    .tag(TabBarSelectionView.notes.rawValue)
                     .environmentObject(viewModel)
                 
                 Text("settings")

@@ -43,7 +43,7 @@ struct HomeView: View {
                     }
                     .padding()
                     
-                    ScrollView {
+                    ScrollView(showsIndicators: false) {
                         VStack {
                             DepositProgressView(
                                 totalAmount: viewModel.totalAmount,
@@ -68,6 +68,7 @@ struct HomeView: View {
                         viewModel.onAppear()
                     }
                 }
+                .padding(.bottom, UIScreen.main.bounds.height * 0.01)
             }
             .onAppear {
                 viewModel.onAppear()
